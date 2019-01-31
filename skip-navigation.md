@@ -11,7 +11,9 @@
 메뉴 건너 뛰기 링크란 하나의 웹 사이트에서 모든 페이지에 걸쳐 반복해서 등장하는 글로벌 네비게이션과 로컬 네비게이션을 건너 뛸 수 있는 링크를 말합니다. 마우스를 함께 사용하는 사람은 이 링크가 왜 필요한지 알기 어렵지만 키보드만으로 웹을 탐색하는 사람들에게는 상당히 중요한 의미를 갖습니다.
 
 > 2.4.1 Bypass Blocks: A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level A)
+>
 > 2.4.1 블럭 우회: 여러 웹 페이지에서 반복되는 콘텐츠 블럭을 우회할 수 있어야 한다. (수준 A)
+>
 > <cite>WCAG 2.0 : 2.4.1</cite>
 
 ### 헤딩은 콘텐츠 블럭을 우회하는 가장 효과적인 방법
