@@ -85,7 +85,7 @@ CSS 코드 내부에서 사용하는 미디어 쿼리의 기본적인 문법 예
 #### orientation
 뷰포트의 너비와 높이 비율을 이용하여 세로 모드인지 가로 모드인지를 판단한다.
 
-* Value: portrait | landscape
+* Value: portrait \| landscape
 * Applies to: bitmap media types
 * Accepts min/max prefixes: no
 
@@ -187,7 +187,7 @@ CSS 코드 내부에서 사용하는 미디어 쿼리의 기본적인 문법 예
 #### scan
 TV의 스캔 방식에 따라 대응한다. `progressive` 값은 초당 60회 수준의 고화질 스캔에 대응하고 `interlace` 값은 초당 30회 수준의 일반 스캔에 대응한다. 대부분의 HDTV는 `progressive`와 `interlace` 방식을 모두 지원하고 있다.
 
-* Value: progressive | interlace
+* Value: progressive \| interlace
 * Applies to: "tv" media types
 * Accepts min/max prefixes: no
 
@@ -200,7 +200,7 @@ TV의 스캔 방식에 따라 대응한다. `progressive` 값은 초당 60회 �
 #### grid
 출력 장치가 그리드 방식이면 대응한다. 그리드 방식은 타자기와 같이 고정된 글꼴만 사용하는 장치이다. 통상 출력 장치는 비트맵이 아니면 그리드 방식이다. 값은 정수 `0`과 `1` 뿐이고 `0`의 값은 비트맵 방식에 대응한다.
 
-* Value: &lt;integer&gt; 0 | 1
+* Value: &lt;integer&gt; 0 \| 1
 * Applies to: visual and tactile media types
 * Accepts min/max prefixes: no
 
