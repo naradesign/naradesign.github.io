@@ -1,4 +1,4 @@
-## CSS3 {font-size:*rem} relative value.
+## CSS3 `{font-size:*rem}` relative value.
 
 CSS3 `font-size` 속성 값으로 새로운 상대적 단위 `rem`을 사용할 수 있게 됐습니다.
 
