@@ -1,5 +1,6 @@
 # naradesign
 
+* [WCAG 2.0 한글 번역.](wcag-2.0-korean-translation.md)
 * [`a` 요소의 사용성과 접근성.](userbility-accessibility-a-element.md)
 * [`float`을 `clear`하는 방법.](float-clearing.md)
 * [리셋(Reset)/취소(Cancel) 버튼은 사라져야 한다.](do-not-use-reset-cancel.md)
@@ -16,5 +17,5 @@
 * [CSS flexible 레이아웃: flex item의 방향과 순서.](flex-direction-order.md)
 * [CSS flexible 레이아웃: flex item의 정렬과 간격.](flex-justify-align.md)
 * [CSS flex: Webkit, Android 2.1~4.3, IE 10 문제 해결.](flex-browser-compatibility.md)
-* [](.md)
-* [](.md)
+* [HTML5 Transparent content models(투명 콘텐츠 모델).](transparent-content-models.md)
+* [Visual Studio Code custom setting memo.](visual-studio.md)
