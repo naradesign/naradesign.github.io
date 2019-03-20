@@ -1,3 +1,5 @@
+# CSS { position: sticky }
+
 CSS `position: sticky` 속성을 소개합니다.
 
 `position: sticky` 속성을 적용한 박스는 평소에 문서 안에서 `position: static` 상태와 같이 일반적인 흐름에 따르지만 스크롤 위치가 임계점에 이르면 `position: fixed`와 같이 박스를 화면에 고정할 수 있는 속성입니다.
