@@ -18,4 +18,5 @@
 * [CSS flexible 레이아웃: flex item의 정렬과 간격.](flex-justify-align.md)
 * [CSS flex: Webkit, Android 2.1~4.3, IE 10 문제 해결.](flex-browser-compatibility.md)
 * [HTML5 Transparent content models(투명 콘텐츠 모델).](transparent-content-models.md)
+* [CSS { position: sticky }.](position-sticky.md)
 * [Visual Studio Code custom setting memo.](visual-studio.md)
