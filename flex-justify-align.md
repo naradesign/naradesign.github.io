@@ -1,6 +1,6 @@
 ## CSS flexible 레이아웃: flex item의 정렬과 간격.
 
-<a href="flex-grow-shrink.md">flex item의 팽창과 수축</a>, <a href="flex-direction-order.md">flex item의 방향과 순서</a>에 이어 오늘은 '**flex item의 정렬과 간격**'에 관하여 설명합니다.
+<a href="flex-grow-shrink.html">flex item의 팽창과 수축</a>, <a href="flex-direction-order.html">flex item의 방향과 순서</a>에 이어 오늘은 '**flex item의 정렬과 간격**'에 관하여 설명합니다.
 
 먼저 **진행 축**(main axis)과 **교차 축**(cross axis)을 이해할 필요가 있습니다. '진행 축'이란 flex item이 배치되는 축(x/y)을 의미합니다. '교차 축'이란 flex item이 배치되는 방향과 90도 교차하는 축을 의미합니다. 진행 축과 교차 축은 상대적인 개념이라서 `flex-direction`의 값( `row`, `column`)에 따라 교차 축이 바뀌기 때문에 헷갈리기 쉽습니다. `flex-direction:row`인 경우 교차 축은 y가 되지만 `flex-direction:column`인 경우 교차 축은 x가 되겠지요.
 
@@ -72,7 +72,7 @@
 ### 마무리
 이번 포스팅을 마지막으로 flexible box 레이아웃 모듈 설명을 모두 마칩니다. 그동안 정리했던 내용을 다시 한번 요약하면 아래와 같습니다.
 
-* <a href="flex-grow-shrink.md">CSS flexible 레이아웃: **flex item의 팽창과 수축**.</a>
+* <a href="flex-grow-shrink.html">CSS flexible 레이아웃: **flex item의 팽창과 수축**.</a>
   * 플렉스 컨테이너와 플렉스 아이템(flex container &amp; flex item)의 개념.
     * flex container(플렉스 컨테이너)
     * flex item(플렉스 아이템)
@@ -81,7 +81,7 @@
     * flex item의 수축을 제어하는 `flex-shrink` 속성.
     * flex item의 기준 사이즈를 제어하는 `flex-basis` 속성.
     * flex item의 단축 속성 `flex`.
-* <a href="flex-direction-order.md">CSS flexible 레이아웃: **flex item의 방향과 순서**.</a>
+* <a href="flex-direction-order.html">CSS flexible 레이아웃: **flex item의 방향과 순서**.</a>
   * flex item의 '방향'을 제어하는 `flex-direction`.
   * flex item의 '줄 바꿈'을 제어하는 `flex-wrap`.
   * flex item의 '뱡향과 줄 바꿈'을 제어하는 단축 속성 `flex-flow`.

@@ -99,7 +99,7 @@ flex item은 `flex-grow`(팽창지수), `flex-shrink`(수축지수), `flex-basis
   * // 생략한 속성 없음.
 
 ### 관련 글
-* <a href="flex-direction-order.md">CSS flexible 레이아웃: flex item의 방향과 순서.</a>
+* <a href="flex-direction-order.html">CSS flexible 레이아웃: flex item의 방향과 순서.</a>
 * <a href="flex-justify-align">CSS flexible 레이아웃: flex item의 정렬과 간격.</a>
 
 ### 참고

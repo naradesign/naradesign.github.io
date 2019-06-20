@@ -1,6 +1,6 @@
 ## CSS flexible 레이아웃: flex item의 방향과 순서.
 
-며칠 전 "<a href="flex-grow-shrink.md">CSS flexible 레이아웃: flex item의 수축과 팽창.</a>" 이라는 포스트를 작성했는데요. 오늘은 flex item의 방향과 순서를 설명합니다.  오늘 설명할 속성은 flex item의 방향을 제어하는 `flex-direction`, 줄 바꿈을 제어하는 `flex-wrap`, 그리고 방향과 줄 바꿈을 단축 속성으로 제어하는 `flex-flow`, 배치 순서를 제어하는 `order` 라는 속성에 대하여 설명합니다. 예제를 보면서 이해하기에 충분하므로 자세한 설명은 생략합니다.
+며칠 전 "<a href="flex-grow-shrink.html">CSS flexible 레이아웃: flex item의 수축과 팽창.</a>" 이라는 포스트를 작성했는데요. 오늘은 flex item의 방향과 순서를 설명합니다.  오늘 설명할 속성은 flex item의 방향을 제어하는 `flex-direction`, 줄 바꿈을 제어하는 `flex-wrap`, 그리고 방향과 줄 바꿈을 단축 속성으로 제어하는 `flex-flow`, 배치 순서를 제어하는 `order` 라는 속성에 대하여 설명합니다. 예제를 보면서 이해하기에 충분하므로 자세한 설명은 생략합니다.
 
 * <a href="#flex-item의-방향을-제어하는-flex-direction">flex item의 '방향'을 제어하는 'flex-direction'.</a>
 * <a href="#flex-item의-줄-바꿈을-제어하는-flex-wrap">flex item의 '줄 바꿈'을 제어하는 'flex-wrap'.</a>
@@ -52,8 +52,8 @@
 <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### 관련 글
-* <a href="flex-grow-shrink.md">CSS flexible 레이아웃: flex item의 팽창과 수축.</a>
-* <a href="flex-justify-align.md">CSS flexible 레이아웃: flex item의 정렬과 간격.</a>
+* <a href="flex-grow-shrink.html">CSS flexible 레이아웃: flex item의 팽창과 수축.</a>
+* <a href="flex-justify-align.html">CSS flexible 레이아웃: flex item의 정렬과 간격.</a>
 
 ### 참고
 * <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" rel="noopener noreferrer">CSS Flexsible box layout module level 1(Candidate Recommendation)</a>
