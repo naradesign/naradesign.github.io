@@ -380,4 +380,4 @@
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/wcag-2.0-korean-translation.html" data-numposts="10"></div>
+<div class="fb-comments" data-href="https://naradesign.github.io/article/wcag-2.0-korean-translation.html" data-numposts="10" data-width="100%"></div>
