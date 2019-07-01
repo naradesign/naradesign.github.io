@@ -210,3 +210,7 @@ TV의 스캔 방식에 따라 대응한다. `progressive` 값은 초당 60회 �
 @media all and (grid:0) { … } // 출력 장치가 그리드 방식이 아니면 실행
 @media all and (grid:1) { … } // 출력 장치가 그리드 방식이면 실행
 ```
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-comments" data-href="https://naradesign.github.io/article/media-query.html" data-numposts="10" data-width="100%"></div>

@@ -61,3 +61,6 @@
 * <a href="http://flexbox.help/">flexbox.help</a>
 * <a href="http://caniuse.com/#search=flexible" target="_blank" rel="noopener noreferrer">caniuse.com</a>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-comments" data-href="https://naradesign.github.io/article/flex-direction-order.html" data-numposts="10" data-width="100%"></div>

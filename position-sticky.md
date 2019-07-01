@@ -57,3 +57,7 @@ CSS `position: sticky` 속성을 소개합니다.
 * [CSS-TRICKS position:sticky](https://css-tricks.com/position-sticky-2/)
 * [Can I use CSS position:sticky](https://caniuse.com/#search=sticky)
 * [Can I use CSS Feature Queries](https://caniuse.com/#feat=css-featurequeries)
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-comments" data-href="https://naradesign.github.io/article/position-sticky.html" data-numposts="10" data-width="100%"></div>

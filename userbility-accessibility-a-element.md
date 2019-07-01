@@ -39,3 +39,7 @@ a 요소의 어원에 해당하는 말은 anchor 입니다. 즉, 우리말로 �
 ```
 
 두 개의 예제 모두 자바스크립트가 동작하는 환경에서는 그 장점을 최대한 활용하지만 자바스크립트가 동작하지 않는 환경에서도 잘 기능되도록 배려한 '겸손한 자바스크립트(unobtrusive javascript)' 의 예라고 볼 수 있습니다. 예제 코드는 신현석님의 글 '<a href="http://hyeonseok.com/docs/accessible-javascript/">접근성을 해치지 않는 Javascript의 사용</a>'을 인용했습니다.
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-comments" data-href="https://naradesign.github.io/article/userbility-accessibility-a-element.html" data-numposts="10" data-width="100%"></div>
