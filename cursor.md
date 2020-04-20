@@ -23,7 +23,3 @@
 "가능하다면 W3C 권장 표준을 따르는 것이 좋겠다. 그럴 수 있을 것 같다. 그래도 될 것 같다."
 
 영감을 주었던 글: <a href="http://story.pxd.co.kr/1165" target="_blank">세상에서 가장 쪼잔한 질문 – 체크박스 옆 라벨 커서는 어떻게 만들어야 할까?</a>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/cursor.html" data-numposts="10" data-width="100%"></div>

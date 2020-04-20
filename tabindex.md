@@ -32,7 +32,3 @@ HTML5 명세는 <a title="Sequential focus navigation and the tabindex attribute
 
 ### `tabindex="-1"`
 키보드 초점을 받을 수 있는 요소도 초점을 받을 수 없도록 만들어 줍니다. 초점을 받을 수 없기 때문에 `"-1"` 이외의 다른 음의 정수 값은 사실상 의미가 없습니다.
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/tabindex.html" data-numposts="10" data-width="100%"></div>

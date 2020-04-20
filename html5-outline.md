@@ -25,7 +25,3 @@ HTML5 outline 알고리즘에 대하여 설명합니다. "outline"은 우리말�
 * <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=ko">HeadingsMap</a>(Chrome extension)
 * <a href="http://appletree.or.kr/blog/web-development/html/html5%EC%9D%98-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%AC%B8%EC%84%9C-outline-%EC%95%8C%EA%B3%A0%EB%A6%AC%EB%93%AC/">HTML5의 새로운 문서 Outline 알고리듬</a>(미남이의 이러쿵저러쿵)
 * <a href="https://www.slideshare.net/NULINTS/2014-html5">시멘틱한 HTML 마크업 구조 설계, 어떻게 할까?</a>(윤원진)
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/html5-outline.html" data-numposts="10" data-width="100%"></div>

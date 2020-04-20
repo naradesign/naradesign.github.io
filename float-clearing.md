@@ -55,7 +55,3 @@ IE 5~7 브라우저는 <a href="http://msdn.microsoft.com/en-us/library/bb250481
 * CSS 2.1 Visual formatting model details – <a href="http://www.w3.org/TR/CSS21/visudet.html#block-root-margin">http://www.w3.org/TR/CSS21/visudet.html#block-root-margin</a>
 * YAML &gt; How Floats Work – <a href="http://www.yaml.de/en/documentation/basics/how-floats-work.html">http://www.yaml.de/en/documentation/basics/how-floats-work.html</a>
 * 신현석 &gt; CSS Floating and Clearing – <a href="http://hyeonseok.com/soojung/web/2005/03/07/123.html">http://hyeonseok.com/soojung/web/2005/03/07/123.html</a>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/float-clearing.html" data-numposts="10" data-width="100%"></div>

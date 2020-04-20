@@ -811,7 +811,3 @@ touchcancel
 * [WAI-ARIA - alert(role)](https://www.w3.org/TR/wai-aria-1.1/#alert )
 * [WAI-ARIA - status(role)](https://www.w3.org/TR/wai-aria-1.1/#status )
 * [WAI-ARIA - log(role)](https://www.w3.org/TR/wai-aria-1.1/#log)
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/wcag-2.1.html" data-numposts="10" data-width="100%"></div>

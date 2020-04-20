@@ -46,7 +46,3 @@
 
 ### 메뉴 건너 뛰기에 관한 다른 의견
 * <a href="http://www.jangkunblog.com/wp/skip-navigation-is-not-a-quick-link/" target="_self">Skip Navigation은 Quick Link가 아닙니다.</a> – 성민장군
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/skip-navigation.html" data-numposts="10" data-width="100%"></div>

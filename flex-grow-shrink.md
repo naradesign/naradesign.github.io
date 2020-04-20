@@ -107,7 +107,3 @@ flex item은 `flex-grow`(팽창지수), `flex-shrink`(수축지수), `flex-basis
 * <a href="https://speckyboy.com/css-flexbox-toolbox/">CSS Flexbox learning guides, tools &amp; frameworks.</a>
 * <a href="http://flexbox.help/">flexbox.help</a>
 * <a href="http://caniuse.com/#search=flexible">caniuse.com</a>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/flex-grow-shrink.html" data-numposts="10" data-width="100%"></div>

@@ -26,7 +26,3 @@ CSS3 `font-size` 속성 값으로 새로운 상대적 단위 `rem`을 사용할 
 
 ### 유용한 상황
 단말기의 해상도에 따라 기본 글꼴 크기를 전체적으로 다르게 제어할 필요가 있을 때 미디어쿼리와 함께 `rem` 단위를 사용하면 효과적입니다. 예를 들어 데스크톱 글꼴이 `10px` ~ `20px` 범위인데 모바일 단말에서 전체적으로 `20px` ~ `40px` 범위로 키우고 싶다면 CSS 만으로 아주 간단하게 처리할 수 있습니다.
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/font-size-rem.html" data-numposts="10" data-width="100%"></div>

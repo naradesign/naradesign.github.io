@@ -158,7 +158,3 @@ WCAG 2.0 지침은 명암의 강도를 `1~21` 단계로 나누고 명암을 전�
         </tr>
     </tbody>
 </table>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/wcag-contrast.html" data-numposts="10" data-width="100%"></div>

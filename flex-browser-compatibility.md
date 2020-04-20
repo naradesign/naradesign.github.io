@@ -136,7 +136,3 @@ IE 10 브라우저는 표준 명세의 `flex-grow`, `flex-shrink`, `flex-basis` 
 * <a href="https://msdn.microsoft.com/ko-kr/library/hh673531(v=vs.85).aspx">IE 10 플렉스 설명서</a>
 * <a href="http://caniuse.com/#feat=flexbox">http://caniuse.com/#feat=flexbox</a>
 * <a href="https://github.com/philipwalton/flexbugs">https://github.com/philipwalton/flexbugs</a>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/flex-browser-compatibility.html" data-numposts="10" data-width="100%"></div>

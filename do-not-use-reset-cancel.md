@@ -15,7 +15,3 @@
 1. 사용자들은 '취소' 버튼 대신 '뒤로가기' 버튼을 이용하거나 '원하는 곳으로 직접 이동하기'를 원합니다. 때때로 '취소' 버튼은 우리를 원하지도 않는 곳으로 안내 합니다. 또한 항상 '절차의 처음'으로 돌아가기를 원하는 것도 아닙니다. '취소' 버튼이 필요한 경우는 몇 번의 절차를 거쳐 입력한 데이터가 더 이상 서버로 전송되지 않는다는 확신을 주어야 할 때에만 필요 합니다.
 
 지금 우리가 참여하고 있는 프로젝트 가운데 얼마나 많은 '리셋'과 '취소' 버튼이 사용되고 있는지 살펴보시고 과연 적절한지 다시 한번 생각해 보는 계기가 되었으면 합니다. **사용성**은 하나의 페이지에서 조작할 수 있는 버튼의 갯수와 보통은 반비례 한다는 사실을 늘 염두해야 합니다.
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/do-not-use-reset-cancel.html" data-numposts="10" data-width="100%"></div>

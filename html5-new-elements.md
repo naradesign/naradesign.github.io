@@ -266,7 +266,3 @@
 데모 – <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</a>
 
 <cite><a href="https://www.w3.org/TR/html5/scripting-1.html#the-canvas-element">https://www.w3.org/TR/html5/scripting-1.html#the-canvas-element</a></cite>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/html5-new-elements.html" data-numposts="10" data-width="100%"></div>

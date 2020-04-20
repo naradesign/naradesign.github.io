@@ -377,7 +377,3 @@
 * <a href="http://gregshin.pe.kr/wcag/wai-pageauth.html">WCAG 1.0 <sup>KOR</sup></a>
 * <a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0 <sup>ENG</sup></a><sup></sup>
 * <a href="http://www.w3c.or.kr/Translation/WCAG20/">WCAG 2.0 <sup>KOR</sup></a>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/wcag-2.0-korean-translation.html" data-numposts="10" data-width="100%"></div>

@@ -29,7 +29,3 @@
 * 명세 번역
   * 지성봉 – <a href="https://mulder21c.github.io/html/dom.html#transparent-content-models">https://mulder21c.github.io/html/dom.html#transparent-content-models</a>
   * 조은 – <a href="https://www.facebook.com/eun.cho.161/posts/1395358057213835?hc_location=ufi">https://www.facebook.com/eun.cho.161/posts/1395358057213835?hc_location=ufi</a>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/transparent-content-models.html" data-numposts="10" data-width="100%"></div>
