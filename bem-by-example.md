@@ -17,7 +17,7 @@ BEM 명명 규칙은 세 가지 뚜렷한 이점을 제공한다.
 *역자 주: CSS 특이성을 잘 모르는 독자는 [특이성 명세](https://www.w3.org/TR/selectors-3/#specificity)와 [특이성 계산기](https://specificity.keegan.st/)를 참고.*
 
 ### BEM은 어떻게 동작하는가?
-BEM 클래스 이름은 최대 3가지 부분으로 나누어진다.
+BEM 클래스 이름은 최대 세 가지로 구성된다.
 
 1. 블록(Block): 구성 요소의 가장 바깥쪽 상위 요소를 블록으로 정의한다.
 2. 요소(Element): 구성 요소 안쪽에는 하나 또는 그 이상의 요소가 있을 수 있다.
@@ -36,7 +36,7 @@ BEM 클래스 이름은 최대 3가지 부분으로 나누어진다.
 ### 예제
 
 #### 요소 또는 변경자가 없는 단순한 구성 요소
-간단한 구성 요소는 단일 요소와 단일 클래스를 사용하는 것 만으로도 블록이 될 수 있다.
+간단한 구성 요소는 단일 요소와 단일 클래스를 사용하는 것만으로도 블록이 될 수 있다.
 ```html
 <!-- 역자 주 / btn은 하나의 구성 요소다 -->
 <button class=”btn”></button>
@@ -81,7 +81,7 @@ BEM 클래스 이름은 최대 3가지 부분으로 나누어진다.
 #### 하위 요소가 있는 구성 요소
 더 복잡한 구성 요소에는 하위 요소가 있다. 스타일이 필요한 각 하위 요소에는 명명된 클래스가 있어야 한다.
 
-BEM의 목적 중 하나는 특이성을 낮추고 일관성있게 유지하는 것이다. HTML의 하위 요소에서 클래스 이름을 생략하지 않아야 한다. 클래스 이름을 생략하면 구성 요소 내부에 있는 이름 없는 요소의 스타일을 처리하기 위해 특이성이 더 높은 선택자를 사용해야 한다(아래 `img` 및 `figcaption` 요소 참고). 클래스 이름을 생략하면 당장은 장황한 클래스 이름을 사용하지 않아서 더 간결해 보일 수 있지만 결국 미래엔 특이성 증가 때문에 위기를 맞게 된다. BEM의 목표 중 하나는 대부분의 선택자가 단일 클래스 이름만 사용하는 것이다.*(역자 주: 물론 복잡도가 높은 구조에서 이것을 실현하기는 쉽지 않다. 하지만 !important 같은 강력한 규칙을 덜 사용하도록 유도한다.)*
+BEM의 목적 중 하나는 특이성을 낮추고 일관성 있게 유지하는 것이다. HTML의 하위 요소에서 클래스 이름을 생략하지 않아야 한다. 클래스 이름을 생략하면 구성 요소 내부에 있는 이름 없는 요소의 스타일을 처리하기 위해 특이성이 더 높은 선택자를 사용해야 한다(아래 `img` 및 `figcaption` 요소 참고). 클래스 이름을 생략하면 당장은 장황한 클래스 이름을 사용하지 않아서 더 간결해 보일 수 있지만 결국 미래엔 특이성 증가 때문에 위기를 맞게 된다. BEM의 목표 중 하나는 대부분의 선택자가 단일 클래스 이름만 사용하는 것이다.*(역자 주: BEM이 선택자 중첩을 금지한다는 의미는 아니다. 하위 요소에 클래스 선택자를 사용하면 !important 같은 끔찍한 규칙을 덜 사용하도록 돕는다.)*
 
 ```html
 <!-- DO THIS -->
@@ -134,7 +134,7 @@ BEM의 목적 중 하나는 특이성을 낮추고 일관성있게 유지하는 
 <figure class="photo">
   <img class="photo__img" src="me.jpg">
   <figcaption class="photo__caption">
-    <blockquote class="photo__caption__quote"> <!-- 클래스 이름에 여러 하위 요소를 명명하지 말 것 -->
+    <blockquote class="photo__caption__quote"> <!-- 클래스 이름에 여러 하위 요소(또는 구조)를 명명하지 말 것 -->
       Look at me!
     </blockquote>
   </figcaption>
@@ -245,4 +245,4 @@ BEM 이름은 의도적으로 `블록__요소--변경자`를 분리하기 위해
 Nathan은 컨텐츠 관리 솔루션 설계 및 확장 가능한 설계 시스템 작성 경험이 있는 백엔드 개발자다. Nathan은 [Dayton Web Developers](http://www.meetup.com/dayton-web-developers/) 및 [Dayton Drupal User Group](http://www.meetup.com/drupal-dayton/)의 설립자다. [Nathan의 글을 더 읽을 수 있다](https://seesparkbox.com/foundry/author/nathan_rambeck). [Twitter](https://twitter.com/nrambeck), [CodePen](https://codepen.io/nrambeck/), [GitHub](https://github.com/nrambeck)에서 그를 찾을 수 있다.
 
 ### 역자
-마크업 개발자 정찬명입니다. 포스트에 문제가 있으면 [이슈](https://github.com/naradesign/article/issues)로 등록해 주세요. 비공개로 연락하시려면 메일 주세요. dece24 앳 gmail 닷 com
+마크업 개발자 정찬명입니다. 포스트에 문제가 있으면 [이슈](https://github.com/naradesign/article/issues)로 등록해 주세요. 비공개로 연락하려면 메일 주세요. dece24 앳 gmail 닷 com
