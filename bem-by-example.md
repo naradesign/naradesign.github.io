@@ -173,7 +173,7 @@ BEM의 목적 중 하나는 특이성을 낮추고 일관성 있게 유지하는
 동일한 구성 요소의 하위 요소를 동일한 방식으로 일관성 있게 수정하려면 기본 구성 요소에 변경자를 추가하고 하나의 변경자를 기반으로 각 하위 요소 스타일을 처리한다. 이렇게 하면 특이성이 높아지지만 구성 요소 수정이 훨씬 수월해진다.
 
 ```html
-<!-- DO THIS / 역자 주 / BEM이 선택자 중첩을 금지하는 건 아니다. 다만 이 이상 깊어지면 곤란하다. -->
+<!-- DO THIS / 역자 주 / BEM이 선택자 중첩을 금지하는 건 아니다. 다만 지금보다 중첩이 더 깊어지면 곤란하다. -->
 <figure class="photo photo--highlighted">
   <img class="photo__img" src="me.jpg">
   <figcaption class="photo__caption">Look at me!</figcaption>
