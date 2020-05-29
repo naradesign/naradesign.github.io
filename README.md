@@ -21,7 +21,3 @@
 * [`tabindex=1`, `tabindex=0`, `tabindex=-1`](tabindex.md)
 * [CSS3 `{font-size:*rem}` relative value.](font-size-rem.md)
 * [`a`, `button`, `label` 요소의 커서 모양.](cursor.md)
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3"></script>
-<div class="fb-comments" data-href="https://naradesign.github.io/article/" data-numposts="10" data-width="100%"></div>
