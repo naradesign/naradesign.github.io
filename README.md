@@ -1,4 +1,4 @@
-# naradesign
+# naradesign.com
 
 * [예제로 이해하는 BEM.](bem-by-example.md)
 * [글쓰기 기본 원칙, 참고 자료.](writing.md)
