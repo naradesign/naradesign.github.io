@@ -88,7 +88,7 @@ e f d c
 `grid` 모듈을 사용하려면 가장 먼저 `grid` 컨테이너를 생성해야 한다. `grid` 컨테이너는 `display` 속성의 값으로 생성할 수 있다.
 
 > * Name: '[display](https://www.w3.org/TR/css-ruby-1/#propdef-display)'
-> * New Values: `grid` | `inline-grid`
+> * New Values: `grid` \| `inline-grid`
 
 값이 `grid`인 경우 블럭 컨테이너를 생성하고 값이 `inline-grid`인 경우 인라인 컨테이너를 생성한다. 자식 요소는 자동으로 그리드 아이템이 된다. 그리드 컨테이너와 그리드 아이템에 선언하지 않은 모든 관련 속성은 초기값으로 설정된다. `grid` 속성으로 트랙(행/열)의 수량과 크기를 설정하고 `grid-area` 속성으로 아이템의 배치와 병합을 설정하기 전까지는 그리드 컨테이너를 생성한 것 만으로 특별한 효용이 없다.
 
@@ -114,7 +114,7 @@ e f d c
 #### row-gap, column-gap
 
 > * Name: '[row-gap](https://www.w3.org/TR/css-align-3/#propdef-row-gap)', '[column-gap](https://www.w3.org/TR/css-align-3/#propdef-column-gap)'
-> * Value: `normal` | [\<length-percentage\>](https://www.w3.org/TR/css-values-4/#typedef-length-percentage)
+> * Value: `normal` \| [\<length-percentage\>](https://www.w3.org/TR/css-values-4/#typedef-length-percentage)
 > * Applies to: [multi-column containers](https://www.w3.org/TR/css-multicol-1/#multi-column-container), [flex containers](https://www.w3.org/TR/css-flexbox-1/#flex-container), [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
 <iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'row-gap, column-gap' properties." src="https://codepen.io/naradesign/embed/eYJjXQZ?height=355&theme-id=light&default-tab=result,css" frameborder="no" allowtransparency="true" allowfullscreen="true">
@@ -136,10 +136,10 @@ e f d c
 `grid`는 단축 속성으로 값 정의 구문이 다소 장황하다. 그러나 그리드 컨테이너에 선언할 수 있는 모든 속성을 `grid` 속성 하나에 모아서 선언할 수 있다. 그리드 컨테이너에 선언하는 속성들은 그리드 트랙(행/열)의 수량과 크기에 관여한다. 단축 속성이기 때문에 명시하지 않고 생략한 값은 초기값으로 재설정된다.
 
 > * Name: '[grid](https://www.w3.org/TR/css-grid-1/#propdef-grid)'
-> * Value: [<‘grid-template’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template) | [<‘grid-template-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows) / [ `auto-flow` && `dense`? ] [<‘grid-auto-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)? | [ `auto-flow` && `dense`? ] [<‘grid-auto-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)? / [<‘grid-template-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns)
+> * Value: [<‘grid-template’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template) \| [<‘grid-template-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows) / [ `auto-flow` && `dense`? ] [<‘grid-auto-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)? \| [ `auto-flow` && `dense`? ] [<‘grid-auto-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)? / [<‘grid-template-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns)
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
-`grid` 속성 값 정의 구문을 분해해서 살펴보자. 공백(` `)과 단일바(`|`) 결합 기호를 사용했는데 공백(` `) 결합 기호가 [우선순위](file:///Users/jcm/github.naradesign/article/css-grid-layout.md#css-%EC%86%8D%EC%84%B1-%EA%B0%92value-%EC%A0%95%EC%9D%98-%EA%B5%AC%EB%AC%B8-%ED%95%B4%EC%84%A4)(1:'` `', 2:`&&`, 3:`||`, 4:`|`, 5:`[]`)가 가장 높기 때문에 공백(` `)으로 분리한 구문들은 하나의 그룹으로 묶을 수 있다. 결국 아래와 같이 3개의 그룹(Option 1 | Option 2 | Option 3)으로 나누어 볼 수 있게 됐다. 단일바(`|`)의 의미에 따라 셋 중 하나의 구문을(하나만) 반드시 선언해야 한다.
+`grid` 속성 값 정의 구문을 분해해서 살펴보자. 공백(` `)과 단일바(`|`) 결합 기호를 사용했는데 공백(` `) 결합 기호가 [우선순위](file:///Users/jcm/github.naradesign/article/css-grid-layout.md#css-%EC%86%8D%EC%84%B1-%EA%B0%92value-%EC%A0%95%EC%9D%98-%EA%B5%AC%EB%AC%B8-%ED%95%B4%EC%84%A4)(1:'` `', 2:`&&`, 3:`||`, 4:`|`, 5:`[]`)가 가장 높기 때문에 공백(` `)으로 분리한 구문들은 하나의 그룹으로 묶을 수 있다. 결국 아래와 같이 3개의 그룹(Option 1 \| Option 2 \| Option 3)으로 나누어 볼 수 있게 됐다. 단일바(`|`)의 의미에 따라 셋 중 하나의 구문을(하나만) 반드시 선언해야 한다.
 
 ```
 <‘grid-template’> // ⬅️ Option 1
@@ -187,7 +187,7 @@ Option 2, Option 3 구문은 한 축 트랙의 수량과 크기를 명시적으�
 [grid-template-areas](#grid-template-areas) 속성의 단축 속성이다. 다시 말하면 `grid-template-*` 속성의 단축 속성이다. 그리드 트랙(행/열)의 수량과 크기에 관여한다.
 
 > * Name: '[grid-template](https://www.w3.org/TR/css-grid-1/#propdef-grid-template)'
-> * Value: none | [ [<‘grid-template-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows) / [<‘grid-template-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns) ] | [ [\<line-names\>](https://www.w3.org/TR/css-grid-1/#typedef-line-names)? [\<string\>](https://www.w3.org/TR/css3-values/#string-value) [\<track-size\>](https://www.w3.org/TR/css-grid-1/#typedef-track-size)? [\<line-names\>](https://www.w3.org/TR/css-grid-1/#typedef-line-names)? ]+ [ / [\<explicit-track-list\>](https://www.w3.org/TR/css-grid-1/#typedef-explicit-track-list) ]?
+> * Value: none \| [ [<‘grid-template-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows) / [<‘grid-template-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns) ] \| [ [\<line-names\>](https://www.w3.org/TR/css-grid-1/#typedef-line-names)? [\<string\>](https://www.w3.org/TR/css3-values/#string-value) [\<track-size\>](https://www.w3.org/TR/css-grid-1/#typedef-track-size)? [\<line-names\>](https://www.w3.org/TR/css-grid-1/#typedef-line-names)? ]+ [ / [\<explicit-track-list\>](https://www.w3.org/TR/css-grid-1/#typedef-explicit-track-list) ]?
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
 `grid-template` 속성의 모든 값은 `grid` 속성의 값으로도 사용할 수 있기 때문에 `grid-template` 속성을 사용하느니 차라리 `grid` 속성을 쓰는 걸 추천한다. 물론 `grid` 단축 속성을 사용하면 선언하지 않은 다른 값들(`grid-auto-*`)은 초기값으로 설정된다. `grid` 속성을 사용하려면 일단 `grid-template` 속성 값의 패턴을 알아야 한다. 값 구문 정의를 분해해서 살펴보자.
