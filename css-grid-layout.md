@@ -15,10 +15,10 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
 격자 위에 아이템을 배치하는 속성이 다양하고 배치 알고리즘이 복잡해 보이는데 실상은 [3개의 단축 속성만으로도 꽤 난도가 높은 레이아웃을 구현할 수 있다](https://codepen.io/naradesign/pen/MWKBmaX?editors=1100). 격자 배치를 표현한 코드는 어떤 코드라도 판독성이 좋지 않다. `<table>`처럼 장황한 코드도 알아보기 어렵지만 `grid`처럼 함축적인 선언도 판독이 쉽지 않다. `grid` 구현할 때 사용하는 3개의 단축 속성은 `grid`, `grid-area`, `gap`인데 이것을 분해하면 18개의 속성으로 이뤄져 있다.
 
 * [그리드 컨테이너 생성하기](#%EA%B7%B8%EB%A6%AC%EB%93%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
-* [gap](#gap-%E2%AC%85%EF%B8%8F-%EA%B2%A9%EC%9E%90-%EC%82%AC%EC%9D%B4%EC%9D%98-%EA%B0%84%EA%B2%A9) ⬅️ 격자 사이의 간격, 컨테이너에 적용.
+* [gap](#gap) ⬅️ 격자 사이의 간격, 컨테이너에 적용.
   * [row-gap](#row-gap-column-gap)
   * [column-gap](#row-gap-column-gap)
-* [grid](#grid-%E2%AC%85%EF%B8%8F-%EA%B2%A9%EC%9E%90%EC%9D%98-%EC%88%98%EB%9F%89%EA%B3%BC-%ED%81%AC%EA%B8%B0) ⬅️ 격자의 수량과 크기, 컨테이너에 적용.
+* [grid](#grid) ⬅️ 격자의 수량과 크기, 컨테이너에 적용.
   * [grid-template](#grid-template)
     * ~~[grid-template-rows](#grid-template-rows)~~ // TODO:
     * ~~[grid-template-columns](#grid-template-columns)~~ // TODO:
@@ -26,7 +26,7 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
   * ~~[grid-auto-flow](#grid-auto-flow)~~ // TODO:
   * ~~[grid-auto-rows](#grid-auto-rows)~~ // TODO:
   * ~~[grid-auto-columns](#grid-auto-columns)~~ // TODO:
-* [grid-area](#grid-area-%E2%AC%85%EF%B8%8F-%EC%95%84%EC%9D%B4%ED%85%9C%EC%9D%98-%EB%B0%B0%EC%B9%98%EC%99%80-%EB%B3%91%ED%95%A9) ~~⬅️ 아이템의 배치와 병합, 아이템에 적용.~~ // TODO:
+* [grid-area](#grid-area) ~~⬅️ 아이템의 배치와 병합, 아이템에 적용.~~ // TODO:
   * ~~[grid-row](#grid-row)~~ // TODO:
     * ~~[grid-row-start](#grid-row-start)~~ // TODO:
     * ~~[grid-row-end](#grid-row-end)~~ // TODO:
@@ -97,7 +97,7 @@ e f d c
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### gap ⬅️ 격자 사이의 간격
+### gap
 `gap`은 `grid` 모듈을 통해 [~~`grid-gap`~~](https://www.w3.org/TR/css-align-3/#gap-legacy) 이라는 이름으로 탄생했지만 현재는 더 다양한 의도로 사용하기 위해 속성 이름을 `gap`으로 바꾸고 [CSS 박스 정렬 모듈(CSS Box Alignment Module Level 3)](https://www.w3.org/TR/css-align-3/#gap-shorthand)의 속성이 됐다. `gap`은 `grid` 전용 모듈이 아님에도 불구하고 `grid` 배치할 때 필수 속성으로 간주하기 때문에 여기서 설명한다.
 
 > * Name: '[gap](https://www.w3.org/TR/css-align-3/#gap-shorthand)'
@@ -131,7 +131,7 @@ e f d c
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### grid ⬅️ 격자의 수량과 크기
+### grid
 
 `grid`는 단축 속성으로 값 정의 구문이 다소 장황하다. 그러나 그리드 컨테이너에 선언할 수 있는 모든 속성을 `grid` 속성 하나에 모아서 선언할 수 있다. 그리드 컨테이너에 선언하는 속성들은 그리드 트랙(행/열)의 수량과 크기에 관여한다. 단축 속성이기 때문에 명시하지 않고 생략한 값은 초기값으로 재설정된다.
 
@@ -344,7 +344,7 @@ grid-area: row-start / col-start / span 2 / span 2;
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
 
-### grid-area ⬅️ 아이템의 배치와 병합
+### grid-area
 
 > * Name: '[grid-area](https://www.w3.org/TR/css-grid-1/#propdef-grid-area)'
 > * Value:
