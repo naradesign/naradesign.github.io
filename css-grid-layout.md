@@ -139,7 +139,7 @@ e f d c
 > * Value: [<‘grid-template’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template) \| [<‘grid-template-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows) / [ `auto-flow` && `dense`? ] [<‘grid-auto-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)? \| [ `auto-flow` && `dense`? ] [<‘grid-auto-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)? / [<‘grid-template-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns)
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
-`grid` 속성 값 정의 구문을 분해해서 살펴보자. 공백(` `)과 단일바(`|`) 결합 기호를 사용했는데 공백(` `) 결합 기호가 [우선순위](file:///Users/jcm/github.naradesign/article/css-grid-layout.md#css-%EC%86%8D%EC%84%B1-%EA%B0%92value-%EC%A0%95%EC%9D%98-%EA%B5%AC%EB%AC%B8-%ED%95%B4%EC%84%A4)(1:'` `', 2:`&&`, 3:`||`, 4:`|`, 5:`[]`)가 가장 높기 때문에 공백(` `)으로 분리한 구문들은 하나의 그룹으로 묶을 수 있다. 결국 아래와 같이 3개의 그룹(Option 1 \| Option 2 \| Option 3)으로 나누어 볼 수 있게 됐다. 단일바(`|`)의 의미에 따라 셋 중 하나의 구문을(하나만) 반드시 선언해야 한다.
+`grid` 속성 값 정의 구문을 분해해서 살펴보자. 공백(` `)과 단일바(`|`) 결합 기호를 사용했는데 공백(` `) 결합 기호가 [우선순위](file:///Users/jcm/github.naradesign/article/css-grid-layout.md#css-%EC%86%8D%EC%84%B1-%EA%B0%92value-%EC%A0%95%EC%9D%98-%EA%B5%AC%EB%AC%B8-%ED%95%B4%EC%84%A4)(1:'` `', 2:`&&`, 3:`||`, 4:`|`, 5:`[]`)가 가장 높기 때문에 공백(` `)으로 분리한 구문들은 하나의 그룹으로 묶을 수 있다. 결국 아래와 같이 3개의 그룹(Option 1 `|` Option 2 `|` Option 3)으로 나누어 볼 수 있게 됐다. 단일바(`|`)의 의미에 따라 셋 중 하나의 구문을(하나만) 반드시 선언해야 한다.
 
 ```
 <‘grid-template’> // ⬅️ Option 1
@@ -160,7 +160,7 @@ Option 1 구문은 행/열 트랙의 수량과 크기를 명시적으로 선언�
 </iframe>
 
 #### Option 2, Option 3
-Option 2, Option 3 구문은 한 축 트랙의 수량과 크기를 명시적으로 선언하고 슬래시(`/`)로 분리한 다른 축 트랙은 수량 제한 없이 크기를 일괄 설정할 때 사용한다. 보통 아이템 수량이 동적으로 결정되거나 수량의 최댓값을 알 수 없는 상황에 적절하다. [grid-template-rows](#grid-template-rows) 또는 [grid-template-columns](#grid-template-columns) 속성을 통해 한 축의 트랙 수량과 크기를 명시적으로 선언한다. 슬래시(`/`)로 분리한 다른 축의 값(`auto-flow`)을 통해 [grid-auto-flow](#grid-auto-flow) 속성 값을 설정할 수 있고 [grid-auto-rows](#grid-auto-rows), [grid-auto-columns](#grid-auto-columns) 속성 값을 통해 선택한 트랙의 크기를 일괄 설정한다.
+Option 2\~3 구문은 한 축 트랙의 수량과 크기를 명시적으로 선언하고 슬래시(`/`)로 분리한 다른 축 트랙은 수량 제한 없이 크기를 일괄 설정할 때 사용한다. 보통 아이템 수량이 동적으로 결정되거나 수량의 최댓값을 알 수 없는 상황에 적절하다. [grid-template-rows](#grid-template-rows) 또는 [grid-template-columns](#grid-template-columns) 속성을 통해 한 축의 트랙 수량과 크기를 명시적으로 선언한다. 슬래시(`/`)로 분리한 다른 축의 값(`auto-flow`)을 통해 [grid-auto-flow](#grid-auto-flow) 속성 값을 설정할 수 있고 [grid-auto-rows](#grid-auto-rows), [grid-auto-columns](#grid-auto-columns) 속성 값을 통해 선택한 트랙의 크기를 일괄 설정한다.
 
 <iframe height="560" style="width: 100%;" scrolling="no" title="CSS grid shorthand property patterns." src="https://codepen.io/naradesign/embed/LYGgMVy?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/LYGgMVy'>CSS grid shorthand property patterns.</a> by Jeong Chan-Myeong
@@ -200,7 +200,7 @@ none // ⬅️ Option 1
 [ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]? // ⬅️ Option 3
 ```
 
-`grid-template` 속성의 값으로 Option 1\~3 중 하나의 패턴을(하나만) 사용할 수 있다. `none`을 선언하면 `grid-template-*` 속성의 모든 값을 초기값으로 설정한다. Option 2\~3는 슬래시(`/`)를 기준으로 왼쪽은 행의 값, 오른쪽은 열의 값이다. Option 2는 `grid-template-rows/columns` 값을 선언하는 패턴, Option 3는 `grid-template-areas` 값을 선언하는 패턴으로 '셀 이름', '줄 이름'을 생성한다.
+`grid-template` 속성의 값으로 Option 1\~3 중 하나의 패턴을(하나만) 사용할 수 있다. `none`을 선언하면 `grid-template-*` 속성의 모든 값을 초기값으로 설정한다. Option 2\~3 구문은 슬래시(`/`)를 기준으로 왼쪽은 행의 값, 오른쪽은 열의 값이다. Option 2는 `grid-template-rows/columns` 값을 선언하는 패턴, Option 3는 `grid-template-areas` 값을 선언하는 패턴으로 '셀 이름', '줄 이름'을 생성한다.
 
 ##### Option 1
 ```
