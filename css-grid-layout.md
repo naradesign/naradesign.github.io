@@ -26,7 +26,7 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
   * ~~[grid-auto-flow](#grid-auto-flow)~~ // TODO:
   * ~~[grid-auto-rows](#grid-auto-rows)~~ // TODO:
   * ~~[grid-auto-columns](#grid-auto-columns)~~ // TODO:
-* [grid-area](#grid-area) ~~⬅️ 아이템의 배치와 병합, 아이템에 적용.~~ // TODO:
+* ~~[grid-area](#grid-area)~~ ⬅️ 아이템의 배치와 병합, 아이템에 적용. // TODO:
   * ~~[grid-row](#grid-row)~~ // TODO:
     * ~~[grid-row-start](#grid-row-start)~~ // TODO:
     * ~~[grid-row-end](#grid-row-end)~~ // TODO:
