@@ -385,12 +385,6 @@ repeat(2, auto) == auto auto
 <auto-track-list> = <auto-repeat> 😃
 ⬇️
 <auto-repeat> = repeat( [ auto-fill | auto-fit ] , <fixed-size> )
-
-/* 자동 트랙의 값으로 유효한 선언들 */
-grid-template-columns: repeat(auto-fill, 80px);
-grid-template-columns: repeat(auto-fit, 20%);
-grid-template-columns: repeat(auto-fill, minmax(auto, 80px)) 160px;
-grid-template-columns: 160px repeat(auto-fit, minmax(80px, auto));
 ```
 
 `<auto-repeat>` 즉 여기서 `repeat()` 함수는 `repeat(반복 알고리즘, 트랙 크기)` 형식이다. `repeat()` 함수의 첫 번째 인자 중 `auto-fill/fit` 구문은 직역하면 '자동 채우기', '자동 맞추기'인데 컨테이너의 크기와 주어진 트랙 크기 조건에 따라서 트랙 수를 자동으로 결정한다.
@@ -401,20 +395,18 @@ grid-template-columns: 160px repeat(auto-fit, minmax(80px, auto));
 
 ```
 /* 유효한 결합 형식 */
-repeat(auto-fill, 80px);
-repeat(auto-fill, minmax(auto, 80px));
-repeat(auto-fit, 20%);
-repeat(auto-fit, minmax(20%, auto));
-80px repeat(auto-fill, 20%);
-20% repeat(auto-fit, 80px);
+grid-template-columns: repeat(auto-fill, 80px);
+grid-template-columns: repeat(auto-fit, 20%);
+grid-template-columns: repeat(auto-fill, minmax(auto, 80px)) 160px;
+grid-template-columns: 160px repeat(auto-fit, minmax(80px, auto));
 
-/* 허용하지 않는 결합 ❌ */
-repeat(auto-fill, auto); /* auto ❌ */
-repeat(auto-fill, 1fr); /* 1fr ❌ */
-repeat(auto-fit, ... auto); /* auto ❌ */
-repeat(auto-fit, ... 1fr); /* 1fr ❌ */
-auto repeat(auto-fill, ...); /* auto ❌ */
-1fr repeat(auto-fit, ...); /* 1fr ❌ */
+/* 허용하지 않는 결합 */
+repeat(auto-fill, auto❌);
+repeat(auto-fill, 1fr❌);
+repeat(auto-fit, ... auto❌);
+repeat(auto-fit, ... 1fr❌);
+auto❌ repeat(auto-fill, ...);
+1fr❌ repeat(auto-fit, ...);
 ```
 
 <iframe height="440" style="width: 100%;" scrolling="no" title="CSS repeat(), auto-fill, auto-fit." src="https://codepen.io/naradesign/embed/oNbmQar?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
