@@ -400,17 +400,21 @@ grid-template-columns: 160px repeat(auto-fit, minmax(80px, auto));
 `auto-fill/fit` 구문은 반복 트랙의 최대 크기를 자동(`auto`)으로 처리할 때 차이를 보인다. `auto-fill`은 트랙의 크기를 줄여서 가능한 많은 수의 트랙을 생성하는 방향으로, `auto-fit`은 트랙의 크기를 늘려서 가능한 적은 수의 트랙을 생성하는 방향으로 처리한다.
 
 ```
-/* 유효한 결합 */
+/* 유효한 결합 형식 */
 repeat(auto-fill, 80px);
 repeat(auto-fill, minmax(auto, 80px));
 repeat(auto-fit, 20%);
 repeat(auto-fit, minmax(20%, auto));
+80px repeat(auto-fill, 20%);
+20% repeat(auto-fit, 80px);
 
 /* 허용하지 않는 결합 ❌ */
-repeat(auto-fill, auto);
-repeat(auto-fill, 1fr);
-repeat(auto-fit, 80px auto);
-repeat(auto-fit, 20% 1fr);
+repeat(auto-fill, auto); /* auto ❌ */
+repeat(auto-fill, 1fr); /* 1fr ❌ */
+repeat(auto-fit, ... auto); /* auto ❌ */
+repeat(auto-fit, ... 1fr); /* 1fr ❌ */
+auto repeat(auto-fill, ...); /* auto ❌ */
+1fr repeat(auto-fit, ...); /* 1fr ❌ */
 ```
 
 <iframe height="440" style="width: 100%;" scrolling="no" title="CSS repeat(), auto-fill, auto-fit." src="https://codepen.io/naradesign/embed/oNbmQar?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
