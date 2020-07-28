@@ -23,7 +23,7 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
   * [grid-template](#grid-template)
     * [grid-template-rows](#grid-template-rows-grid-template-columns)
     * [grid-template-columns](#grid-template-rows-grid-template-columns)
-    * ~~[grid-template-areas](#grid-template-areas)~~ // TODO:
+    * [grid-template-areas](#grid-template-areas)
   * ~~[grid-auto-flow](#grid-auto-flow)~~ // TODO:
   * ~~[grid-auto-rows](#grid-auto-rows)~~ // TODO:
   * ~~[grid-auto-columns](#grid-auto-columns)~~ // TODO:
