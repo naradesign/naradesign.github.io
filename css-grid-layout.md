@@ -416,10 +416,81 @@ auto❌ repeat(auto-fill, ...);
 
 ### grid-template-areas
 
+`grid-template-areas` 속성은 격자에 '셀 이름'을 생성한다. 생성한 셀 이름은 그리드 아이템을 제어하는 그리드 배치 속성(`grid-area`)에서 참조할 수 있다. 격자 전체의 구조를 문자로 시각화하여 이해하기 쉬운 장점이 있다.
+
 > * Name: '[grid-template-areas](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-areas)'
-> * Value:
+> * Value: `none` \| [\<string\>](https://www.w3.org/TR/css3-values/#string-value)+
+> * Initial: `none`
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
+격자에 '셀 이름'이 없어도 암시적으로 생성된 '줄 번호'를 참조하면 아이템을 배치하고 병합할 수 있기 때문에 이 속성을 필수라고 생각하지 않아도 된다.
+
+```
+none | <string>+
+```
+
+`grid-template-areas` 속성의 값은 `grid`, `grid-template` 단축 속성의 값으로 사용할 수 있고 값을 생략하는 경우 초기 값은 `none`이다. `none` 값을 선언하면 암시적 그리드가 생성되고 트랙의 크기는 임의로 설정된다.
+
+열을 생성하려면 문자 `<string>`을 공백으로 분리하여 나열한다. 행을 생성하려면 하나의 행에 해당하는 `<string>` 문자 그룹을 따옴표(`''`, `""`)로 묶은 다음 공백으로 분리하여 나열하면 된다. 각 행마다 선언한 열의 개수가 다르면 유효하지 않다. 아래 예제는 12개의 셀 위에 7개의 아이템(header, nav, main, footer + 익명의 셀 3개)을 배치하고 병합했다. 이 속성의 값은 보통 격자 형태로 보기 좋게 줄 바꿈하여 작성한다.
+
+```
+grid-template-areas:
+  'header header header'
+  'nav    main   main'
+  '.      .      .'
+  'footer footer footer';
+```
+
+<iframe height="440" style="width: 100%;" scrolling="no" title="CSS 'grid-template-areas' property." src="https://codepen.io/naradesign/embed/VweOeZg?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/VweOeZg'>CSS 'grid-template-areas' property.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<br>
+<br>
+
+마침표(`.`) 문자를 사용하면 이름 없는 셀을 생성할 수도 있다. 아래 코드는 익명으로 3개의 열과 하나의 행을 생성했다. 3개를 초과하는 아이템을 포함한 경우 열 개수는 변함 없이 3개이고 행 개수가 늘어나게 된다.
+
+```
+grid-template-areas: '. . .';
+```
+
+이런 코드는 거의 사용할 일이 없겠지만 `grid-template-*` 속성을 사용하지 않고 간격이 균일한 셀을 생성하려고 할 때 유용할 수 있다. 사용할 일이 없다고 표현한 이유는 셀의 크기를 명시하기 위해 `grid-template-*` 속성 값(트랙의 수와 크기)을 사용하는 경우가 일반적이고 그것만으로 익명의 셀이 생성되기 때문이다.
+
+```
+grid-template-areas: '. . .';
+==
+grid-template-columns: 1fr 1fr 1fr;
+==
+grid-template-columns: repeat(3, 1fr);
+```
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="CSS 'grid-template-areas' property." src="https://codepen.io/naradesign/embed/YzwbwYz?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/YzwbwYz'>CSS 'grid-template-areas' property.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<br>
+<br>
+
+`grid-template-areas` 속성을 꼭 사용해야 할 이유가 없다면 아래와 같이 간결하게 `grid` 단축 속성으로 선언하는 것을 권장한다.
+
+```
+grid:
+  'header header header'
+  'nav    main   main'
+  '.      .      .'
+  'footer footer footer' / 1fr 2fr 3fr;
+
+/* 아래 세 줄은 모두 익명의 셀을 생성하며 결과가 같다 */
+grid: '. . .' / 1fr 2fr 3fr;
+grid: auto / 1fr 2fr 3fr;
+grid: none / 1fr 2fr 3fr;
+```
+
+#### 암시적 '줄 이름', '셀 이름' 생성
+
+셀 이름을 생성하면 암시적 줄 이름이 생성되고 줄 이름을 생성하면 암시적 셀 이름이 생성된다. 예를 들면 `foo` 라는 셀 이름은 셀의 상단과 좌측에 암시적으로 `foo-start`라는 줄 이름을 생성하고 셀의 우측과 하단에 `foo-end`라는 줄 이름을 생성하여 참조할 수 있게 된다. 마찬가지로 `bar-start`, `bar-end` 라는 줄 이름을 생성하면 `bar`라는 셀 이름이 암시적으로 생성되어 참조할 수 있다. 이런 특징을 이용할 일이 흔하지는 않을 것으로 보지만 [판독성이 좋지 않아 추천하지 않는다](https://codepen.io/naradesign/pen/NWxVNMO?editors=1100).
+
+셀 이름과 줄 이름은 고유하지 않아도 되기 때문에 여러 번 선언할 수 있다. 줄 이름이 중복인 경우 줄 이름에 연결된 암시적 줄 번호가 생성된다. 예를 들면 여러 개의 `foo-end`가 있는 경우 `foo-end 1` 또는 `foo-end 2` 형식으로 참조할 수 있다.
 
 ### grid-auto-rows
 
