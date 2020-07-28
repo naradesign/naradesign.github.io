@@ -123,7 +123,6 @@ e f d c
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 <br>
-<br>
 
 `normal` 값은 `0`과 같다. 단, 다중 열 컨테이너(multi-column containers)에서는 `1em`으로 설정된다.
 
@@ -179,7 +178,6 @@ Option 2\~3 구문은 한 축 트랙의 수와 크기를 명시적으로 선언�
   See the Pen <a href='https://codepen.io/naradesign/pen/LYGgMVy'>CSS grid shorthand property patterns.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 <br>
 
 정리하면 `grid` 속성은 `grid-template-*`, `grid-auto-*` 속성의 단축 속성이다. 하위 속성의 명세를 알고 있어야 `grid` 단축 속성을 제대로 사용할 수 있다.
@@ -288,7 +286,6 @@ grid-area: 1 / 1 / span 2 / span 2;
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 <br>
-<br>
 
 '줄 이름' `<line-names>?`을 선언하는 코드는 추천하지 않는다. 왜냐하면 '줄 번호' 또는 '셀 이름' 중 하나를 참조하는 것 만으로도 그리드 아이템의 배치와 병합에 제약이 없기 때문이다. '줄 이름'을 선언하고 참조할 수 있도록 명세에 포함한 것은 불필요했다고 생각한다.
 
@@ -356,7 +353,6 @@ repeat(2, auto) == auto auto
   See the Pen <a href='https://codepen.io/naradesign/pen/yLeZprd'>CSS 'grid-template-rows/columns' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 <br>
 
 아래와 같이 줄 이름 `<line-names>?`을 선언할 수도 있다. 이렇게 선언한 줄 이름은 그리드 아이템에서 `grid-area` 속성의 값으로 참조하여 아이템의 배치와 셀 병합에 사용할 수 있다. 선언만 해 놓고 `grid-area`에서 참조하지 않으면 아무 소용이 없는 코드다. '줄 이름' 대신 '줄 번호'를 참조하거나 '셀 이름'을 선언해서 참조하는 것이 더 간결하다.
@@ -446,7 +442,6 @@ grid-template-areas:
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 <br>
-<br>
 
 마침표(`.`) 문자를 사용하면 이름 없는 셀을 생성할 수도 있다. 아래 코드는 익명으로 3개의 열과 하나의 행을 생성했다. 3개를 초과하는 아이템을 포함한 경우 열 개수는 변함 없이 3개이고 행 개수가 늘어나게 된다.
 
@@ -468,7 +463,6 @@ grid-template-columns: repeat(3, 1fr);
   See the Pen <a href='https://codepen.io/naradesign/pen/YzwbwYz'>CSS 'grid-template-areas' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 <br>
 
 `grid-template-areas` 속성을 꼭 사용해야 할 이유가 없다면 아래와 같이 간결하게 `grid` 단축 속성으로 선언하는 것을 권장한다.
