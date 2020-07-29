@@ -24,9 +24,9 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
     * [grid-template-rows](#grid-template-rows-grid-template-columns)
     * [grid-template-columns](#grid-template-rows-grid-template-columns)
     * [grid-template-areas](#grid-template-areas)
-  * ~~[grid-auto-flow](#grid-auto-flow)~~ // TODO:
-  * ~~[grid-auto-rows](#grid-auto-rows)~~ // TODO:
-  * ~~[grid-auto-columns](#grid-auto-columns)~~ // TODO:
+  * [grid-auto-flow](#grid-auto-flow)
+  * ~~[grid-auto-rows](#grid-auto-rows-grid-auto-columns)~~ // TODO:
+  * ~~[grid-auto-columns](#grid-auto-rows-grid-auto-columns)~~ // TODO:
 * ~~[grid-area](#grid-area)~~ ⬅️ 아이템의 배치와 병합, 아이템에 적용. // TODO:
   * ~~[grid-row](#grid-row)~~ // TODO:
     * ~~[grid-row-start](#grid-row-start)~~ // TODO:
@@ -39,8 +39,8 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
 
 CSS Grid 모듈의 명세를 정확하게 이해하려면 구성요소 값 결합 기호(Component Value Combinators)와 구성요소 값 곱수 기호(Component Value Multipliers)를 판독할 수 있어야 한다. 아래 예제는 `gap` 속성의 값을 기술하는 명세다. 간결하지만 많은 정보를 포함한다.
 
-> Name: 'gap'<br>
-> Value: <'row-gap'> <'column-gap'>?
+> * Name: 'gap'
+> * Value: <'row-gap'> <'column-gap'>?
 
 이 명세는 다음과 같이 해석할 수 있다.
 
@@ -91,9 +91,9 @@ e f d c
 > * Name: '[display](https://www.w3.org/TR/css-ruby-1/#propdef-display)'
 > * New Values: `grid` \| `inline-grid`
 
-값이 `grid`인 경우 블럭 컨테이너를 생성하고 값이 `inline-grid`인 경우 인라인 컨테이너를 생성한다. 자식 요소는 자동으로 그리드 아이템이 된다. 그리드 컨테이너와 그리드 아이템에 선언하지 않은 모든 `grid-*` 속성은 초기값으로 설정된다. `grid` 속성으로 컨테이너의 트랙(행/열)의 수와 크기를 설정하고 `grid-area` 속성으로 아이템의 배치와 병합을 설정하기 전까지는 그리드 컨테이너를 생성한 것 만으로 특별한 효용이 없다.
+값이 `grid`인 경우 블럭 컨테이너를 생성하고 값이 `inline-grid`인 경우 인라인 컨테이너를 생성한다. 자식 요소는 자동으로 그리드 아이템이 된다. 그리드 컨테이너와 그리드 아이템에 선언하지 않은 모든 `grid-*` 속성은 초기값으로 설정된다. `grid` 속성으로 컨테이너의 트랙(행/열) 수와 크기를 설정하고 `grid-area` 속성으로 아이템의 배치와 병합을 설정하기 전까지는 그리드 컨테이너를 생성한 것 만으로 특별한 효용이 없다.
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="Establishing Grid Containers." src="https://codepen.io/naradesign/embed/bGEjZXP?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="Establishing Grid Containers." src="https://codepen.io/naradesign/embed/bGEjZXP?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/bGEjZXP'>Establishing Grid Containers.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -107,7 +107,7 @@ e f d c
 
 `gap`은 `row-gap`과 `column-gap`의 단축 속성이다. 두 개의 값을 공백으로 분리하여 작성하는데 첫 번째 `row-gap` 값이 필수다. 두 번째 값을 생략하면 첫 번째 `row-gap`의 값을 `column-gap` 값으로 취한다.
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'gap, row-gap, column-gap' properties." src="https://codepen.io/naradesign/embed/abdjEWY?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'gap, row-gap, column-gap' properties." src="https://codepen.io/naradesign/embed/abdjEWY?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/abdjEWY'>CSS 'gap, row-gap, column-gap' properties.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -118,15 +118,14 @@ e f d c
 > * Value: `normal` \| [\<length-percentage\>](https://www.w3.org/TR/css-values-4/#typedef-length-percentage)
 > * Applies to: [multi-column containers](https://www.w3.org/TR/css-multicol-1/#multi-column-container), [flex containers](https://www.w3.org/TR/css-flexbox-1/#flex-container), [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'row-gap, column-gap' properties." src="https://codepen.io/naradesign/embed/eYJjXQZ?height=355&theme-id=light&default-tab=result,css" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'row-gap, column-gap' properties." src="https://codepen.io/naradesign/embed/eYJjXQZ?height=355&theme-id=light&default-tab=result,css" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/eYJjXQZ'>CSS 'row-gap, column-gap' properties.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 `normal` 값은 `0`과 같다. 단, 다중 열 컨테이너(multi-column containers)에서는 `1em`으로 설정된다.
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="CSS muli-column comtainer's gap property normal value test." src="https://codepen.io/naradesign/embed/vYLaMoB?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS muli-column comtainer's gap property normal value test." src="https://codepen.io/naradesign/embed/vYLaMoB?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/vYLaMoB'>CSS muli-column comtainer's gap property normal value test.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -159,7 +158,7 @@ e f d c
 
 `<‘grid-template’>` 구문은 행/열 트랙의 수와 크기를 명시적으로 선언할 때 사용한다. [grid-template](#grid-template) 속성의 값을 선언할 수 있는데 [grid-template](#grid-template) 속성은 [grid-template-rows](#grid-template-rows-grid-template-columns), [grid-template-columns](##grid-template-rows-grid-template-columns), [grid-template-areas](#grid-template-areas) 속성의 단축 속성이다.
 
-<iframe height="680" style="width: 100%;" scrolling="no" title="CSS grid shorthand property patterns." src="https://codepen.io/naradesign/embed/rNxqxyW?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="680" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS grid shorthand property patterns." src="https://codepen.io/naradesign/embed/rNxqxyW?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/rNxqxyW'>CSS grid shorthand property patterns.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -174,11 +173,10 @@ e f d c
 
 Option 2\~3 구문은 한 축 트랙의 수와 크기를 명시적으로 선언하고 슬래시(`/`)로 분리한 다른 축 트랙은 트랙의 수 제한 없이 크기를 일괄 설정할 때 사용한다. [grid-template-rows](#grid-template-rows-grid-template-columns) 또는 [grid-template-columns](#grid-template-rows-grid-template-columns) 속성을 통해 한 축의 트랙 수와 크기를 명시적으로 선언한다. 슬래시(`/`)로 분리한 다른 축의 값(`auto-flow`)을 통해 [grid-auto-flow](#grid-auto-flow) 속성 값을 설정할 수 있고 [grid-auto-rows](#grid-auto-rows), [grid-auto-columns](#grid-auto-columns) 속성 값을 통해 선택한 트랙의 크기를 일괄 설정한다. `auto-flow` 값을 행의 위치에 선언하면 `grid-auto-flow: row` 속성이 설정되어 아이템이 행축(x)으로 흐르고 열의 위치에 선언하면 `grid-auto-flow: column` 속성이 설정되어 아이템이 열축(y)으로 흐르게 된다. `dense` 값을 함께 선언하면 아이템을 밀집 상태로 패킹한다.
 
-<iframe height="560" style="width: 100%;" scrolling="no" title="CSS grid shorthand property patterns." src="https://codepen.io/naradesign/embed/LYGgMVy?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="560" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS grid shorthand property patterns." src="https://codepen.io/naradesign/embed/LYGgMVy?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/LYGgMVy'>CSS grid shorthand property patterns.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 정리하면 `grid` 속성은 `grid-template-*`, `grid-auto-*` 속성의 단축 속성이다. 하위 속성의 명세를 알고 있어야 `grid` 단축 속성을 제대로 사용할 수 있다.
 
@@ -188,8 +186,8 @@ Option 2\~3 구문은 한 축 트랙의 수와 크기를 명시적으로 선언�
     * [grid-template-columns](#grid-template-rows-grid-template-columns)
     * [grid-template-areas](#grid-template-areas)
   * [grid-auto-flow](#grid-auto-flow)
-  * [grid-auto-rows](#grid-auto-rows)
-  * [grid-auto-columns](#grid-auto-columns)
+  * [grid-auto-rows](#grid-auto-rows-grid-auto-columns)
+  * [grid-auto-columns](#grid-auto-rows-grid-auto-columns)
 
 ### grid-template
 
@@ -240,7 +238,7 @@ grid-template-columns: 160px 1fr auto;
 grid-template-areas: none;
 ```
 
-<iframe height="320" style="width: 100%;" scrolling="no" title="CSS 'grid-template' property." src="https://codepen.io/naradesign/embed/WNrLdPW?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="320" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-template' property." src="https://codepen.io/naradesign/embed/WNrLdPW?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/WNrLdPW'>CSS 'grid-template' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -281,11 +279,10 @@ grid-area: span 2 / span 2;
 grid-area: 1 / 1 / span 2 / span 2;
 ```
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'grid-template' property." src="https://codepen.io/naradesign/embed/BajvYxa?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-template' property." src="https://codepen.io/naradesign/embed/BajvYxa?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/BajvYxa'>CSS 'grid-template' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 '줄 이름' `<line-names>?`을 선언하는 코드는 추천하지 않는다. 왜냐하면 '줄 번호' 또는 '셀 이름' 중 하나를 참조하는 것 만으로도 그리드 아이템의 배치와 병합에 제약이 없기 때문이다. '줄 이름'을 선언하고 참조할 수 있도록 명세에 포함한 것은 불필요했다고 생각한다.
 
@@ -349,11 +346,10 @@ repeat(2, auto) == auto auto
 160px repeat(2, 80px 1fr) == 160px 80px 1fr 80px 1fr
 ```
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'grid-template-rows/columns' property." src="https://codepen.io/naradesign/embed/yLeZprd?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-template-rows/columns' property." src="https://codepen.io/naradesign/embed/yLeZprd?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/yLeZprd'>CSS 'grid-template-rows/columns' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 아래와 같이 줄 이름 `<line-names>?`을 선언할 수도 있다. 이렇게 선언한 줄 이름은 그리드 아이템에서 `grid-area` 속성의 값으로 참조하여 아이템의 배치와 셀 병합에 사용할 수 있다. 선언만 해 놓고 `grid-area`에서 참조하지 않으면 아무 소용이 없는 코드다. '줄 이름' 대신 '줄 번호'를 참조하거나 '셀 이름'을 선언해서 참조하는 것이 더 간결하다.
 
@@ -405,7 +401,7 @@ auto❌ repeat(auto-fill, ...);
 1fr❌ repeat(auto-fit, ...);
 ```
 
-<iframe height="440" style="width: 100%;" scrolling="no" title="CSS repeat(), auto-fill, auto-fit." src="https://codepen.io/naradesign/embed/oNbmQar?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="440" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS repeat(), auto-fill, auto-fit." src="https://codepen.io/naradesign/embed/oNbmQar?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/oNbmQar'>CSS repeat(), auto-fill, auto-fit.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -437,11 +433,10 @@ grid-template-areas:
   'footer footer footer';
 ```
 
-<iframe height="440" style="width: 100%;" scrolling="no" title="CSS 'grid-template-areas' property." src="https://codepen.io/naradesign/embed/VweOeZg?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="440" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-template-areas' property." src="https://codepen.io/naradesign/embed/VweOeZg?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/VweOeZg'>CSS 'grid-template-areas' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 마침표(`.`) 문자를 사용하면 이름 없는 셀을 생성할 수도 있다. 아래 코드는 익명으로 3개의 열과 하나의 행을 생성했다. 3개를 초과하는 아이템을 포함한 경우 열 개수는 변함 없이 3개이고 행 개수가 늘어나게 된다.
 
@@ -459,11 +454,10 @@ grid-template-columns: 1fr 1fr 1fr;
 grid-template-columns: repeat(3, 1fr);
 ```
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="CSS 'grid-template-areas' property." src="https://codepen.io/naradesign/embed/YzwbwYz?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="400" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-template-areas' property." src="https://codepen.io/naradesign/embed/YzwbwYz?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/naradesign/pen/YzwbwYz'>CSS 'grid-template-areas' property.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 `grid-template-areas` 속성을 꼭 사용해야 할 이유가 없다면 아래와 같이 간결하게 `grid` 단축 속성으로 선언하는 것을 권장한다.
 
@@ -486,23 +480,41 @@ grid: none / 1fr 2fr 3fr;
 
 셀 이름과 줄 이름은 고유하지 않아도 되기 때문에 여러 번 선언할 수 있다. 줄 이름이 중복인 경우 줄 이름에 연결된 암시적 줄 번호가 생성된다. 예를 들면 여러 개의 `foo-end`가 있는 경우 `foo-end 1` 또는 `foo-end 2` 형식으로 참조할 수 있다.
 
-### grid-auto-rows
-
-> * Name: '[grid-auto-rows](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)'
-> * Value:
-> * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
-
-
-### grid-auto-columns
-
-> * Name: '[grid-auto-columns](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)'
-> * Value:
-> * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
-
-
 ### grid-auto-flow
 
+`grid-auto-flow` 속성은 그리드 아이템의 흐름 방향과 밀집도를 제어하는 속성이다. 생략하는 경우의 초기값은 `row`이다. 행축(x축) 방향으로 먼저 아이템을 쌓고 공간이 부족하면 새로운 행 트랙을 만든다.
+
 > * Name: '[grid-auto-flow](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-flow)'
+> * Value: [ `row` \| `column` ] \|\| `dense`
+> * Initial: `row`
+> * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
+
+`row`, `column`, `dense` 값 중 반드시 하나를 선언해야 한다. `dense` 값만 선언하는 경우 `row dense`를 의미한다.
+
+```
+// grid-auto-flow 속성 값 정의 구문
+[ row | column ] || dense
+
+...
+
+// grid 단축 속성 값 정의 구문
+<‘grid-template’> // ⬅️ Option 1
+|
+<‘grid-template-rows’> / [ auto-flow && dense? ] <‘grid-auto-columns’>? // ⬅️ Option 2
+|
+[ auto-flow && dense? ] <‘grid-auto-rows’>? / <‘grid-template-columns’> // ⬅️ Option 3
+```
+
+`grid` 단축 속성에서는 `grid-auto-flow` 속성의 값을 그대로 사용하지 않고 문법이 살짝 다르다. `[ auto-flow && dense? ]` 구분이 `grid-auto-flow` 속성의 값을 설정하는 부분이다. 슬래시(`/`) 기호를 기준으로 어느 위치에 `auto-flow` 값을 선언하는지에 따라 `grid-auto-flow` 속성의 값이 `row` 또는 `column`으로 설정된다. `grid` 단축 속성에 `auto-flow` 값을 선언하는 경우 선택적으로 `grid-auto-*` 속성의 값 `<track-size>+`와 함께 선언하여 한 축의 트랙 크기를 일괄 설정할 수 있다.
+
+<iframe height="560" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-auto-flow' property." src="https://codepen.io/naradesign/embed/bGEyyLv?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/bGEyyLv'>CSS 'grid-auto-flow' property.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+### grid-auto-rows, grid-auto-columns
+
+> * Name: '[grid-auto-rows](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)', '[grid-auto-columns](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)'
 > * Value:
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
