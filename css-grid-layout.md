@@ -489,7 +489,7 @@ grid: none / 1fr 2fr 3fr;
 > * Initial: `row`
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
-`row`, `column`, `dense` 값 중 반드시 하나를 선언해야 한다. `dense` 값만 선언하는 경우 `row dense`를 의미한다.
+`row`, `column`, `dense` 값 중 반드시 하나 또는 두 개의 값을 선언해야 한다. `dense` 값만 선언하는 경우 `row dense`를 의미한다.
 
 ```
 // grid-auto-flow 속성 값 정의 구문
