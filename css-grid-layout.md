@@ -25,8 +25,8 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
     * [grid-template-columns](#grid-template-rows-grid-template-columns)
     * [grid-template-areas](#grid-template-areas)
   * [grid-auto-flow](#grid-auto-flow)
-  * ~~[grid-auto-rows](#grid-auto-rows-grid-auto-columns)~~ // TODO:
-  * ~~[grid-auto-columns](#grid-auto-rows-grid-auto-columns)~~ // TODO:
+  * [grid-auto-rows](#grid-auto-rows-grid-auto-columns)
+  * [grid-auto-columns](#grid-auto-rows-grid-auto-columns)
 * ~~[grid-area](#grid-area)~~ ⬅️ 아이템의 배치와 병합, 아이템에 적용. // TODO:
   * ~~[grid-row](#grid-row)~~ // TODO:
     * ~~[grid-row-start](#grid-row-start)~~ // TODO:
@@ -514,10 +514,86 @@ grid: none / 1fr 2fr 3fr;
 
 ### grid-auto-rows, grid-auto-columns
 
+`grid-auto-rows/columns` 속성은 크기가 정해지지 않은 암시적 트랙의 크기를 일괄 설정한다. 다시 말하면 `grid-template-rows/columns` 속성에서 제어하지 않고 있는 트랙의 크기를 일괄 설정하는 속성이다. `grid-template-rows/columns` 속성의 폴백(fallback)으로 봐도 좋다.
+
 > * Name: '[grid-auto-rows](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)', '[grid-auto-columns](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)'
-> * Value:
+> * Value: `<track-size>`+
+> * Initial: `auto`
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
+`grid` 단축 속성의 값으로 사용할 수 있는데 값이 나타나는 순서는 `auto-flow` 다음이다.
+
+```
+// grid 단축 속성 값 정의 구문
+<‘grid-template’> // ⬅️ Option 1
+|
+<‘grid-template-rows’> / [ auto-flow && dense? ] <‘grid-auto-columns’>? // ⬅️ Option 2
+|
+[ auto-flow && dense? ] <‘grid-auto-rows’>? / <‘grid-template-columns’> // ⬅️ Option 3
+```
+
+
+아이템 수가 격자의 수를 초과한 경우(예: 4개의 격자에 5개 이상의 아이템 발생 시) 그리드 컨테이너는 크기가 정해지지 않은 암시적 트랙을 자동으로 생성하게 된다. 이때 `grid-auto-rows/columns` 속성을 사용하면 자동으로 생성된 트랙의 크기를 일괄 설정할 수 있다. 또는 `grid-template-areas` 속성으로 생성한(크기를 명시하지 않은) 셀의 크기도 `grid-auto-rows/columns` 속성으로 크기를 일괄 설정할 수 있다.
+
+속성과 값을 선언하지 않은 경우 초기 값은 `auto`이다. 값이 `auto`인 경우 셀에 포함한 콘텐츠에 따라 트랙의 크기가(비율이) 임의로 결정된다. 트랙의 크기를 선언하는 경우 `<track-size>+`를 명시하면 되는데 값 정의 구문을 통해 어떤 유형의 값을 선언할 수 있는지 알아보자.
+
+```
+// 트랙 크기 값 정의 구문
+<track-size> = <track-breadth> | minmax( <inflexible-breadth> , <track-breadth> ) | fit-content( <length-percentage> )
+
+// ⬇ 아래와 같이 분해할 수 있다.
+<track-breadth> // ⬅️ Option 1
+|
+minmax( <inflexible-breadth> , <track-breadth> ) // ⬅️ Option 2
+|
+fit-content( <length-percentage> ) // ⬅️ Option 3
+```
+#### \<track-breadth\> // ⬅️ Option 1
+`grid-auto-rows/columns` 속성 값의 첫 번째 옵션인 `<track-breadth>` 구문은 다음과 같이 분해할 수 있다.
+```
+<track-breadth> = <length-percentage> | <flex> | min-content | max-content | auto
+
+// ⬇ 아래 옵션 중 하나를 의미한다.
+<length-percentage> ⮕ [ <length> | <percentage> ] ⮕ px | em | ... | %
+<flex> ⮕ fr(fraction) 단위를 사용한 값으로 컨테이너에서 남은 공간의 비율을 의미.
+min-content ⮕ 콘텐츠에 맞춤. 가능한 작게 수축. 텍스트 콘텐츠는 공백 기준으로 개행.
+max-content ⮕ 콘텐츠에 맞춤. 가능한 크게 팽창. 텍스트 콘텐츠에 공백이 있어도 줄 바꿈 안 함.
+auto ⮕ 초기 값이다. 컨테이너의 크기, 격자의 수, 포함한 콘텐츠 양에 따라 트랙의 크기를 임의로 결정.
+```
+
+<iframe height="600" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-auto-rows/columns' property. &lt;track-breadth&gt; value." src="https://codepen.io/naradesign/embed/ZEQdJXX?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/ZEQdJXX'>CSS 'grid-auto-rows/columns' property. &lt;track-breadth&gt; value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+#### minmax( \<inflexible-breadth\> , \<track-breadth\> ) // ⬅️ Option 2
+
+`grid-auto-rows/columns` 속성 값의 두 번째 옵션인 `minmax()` 구문은 트랙의 '최소, 최대' 크기를 선언하는 구문이다. `minmax()` 함수의 첫 번째 인자는 트랙의 최솟값, 두 번째 인자는 최댓값이다. `<inflexible-breadth>` 값의 형식은 `<track-breadth>` 값 형식으로부터 `<flex>` 값을 제외한 형식이다. 다음과 같이 분해할 수 있다.
+
+```
+<inflexible-breadth>  = <length-percentage> |          min-content | max-content | auto
+<track-breadth>       = <length-percentage> | <flex> | min-content | max-content | auto
+```
+
+따라서 `minmax()` 함수의 첫 번째 인자로 `fr` 값은 사용할 수 없다.
+
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-auto-rows/columns' property. 'minmax()' function value." src="https://codepen.io/naradesign/embed/qBbzPpE?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/qBbzPpE'>CSS 'grid-auto-rows/columns' property. 'minmax()' function value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+#### fit-content( \<length-percentage\> ) // ⬅️ Option 3
+
+`grid-auto-rows/columns` 속성 값의 세 번째 옵션인 `fit-content()` 구문은 `minmax()` 함수의 다른 형식이다. 첫 번째 인자인 최솟값은 `max-content`와 같아서 콘텐츠의 최댓값만큼 팽창한다. 두 번째 인자인 최댓값은 넘겨 받은 인자의 크기 `<length-percentage>` 이다. 기본적으로 콘텐츠 최대 크기만큼 트랙의 크기를 팽창하지만 최댓값의 범위를 제한할 필요가 있을 때 사용하면 적절하다.
+
+```
+fit-content( <length-percentage> )
+```
+
+<iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'grid-auto-rows/columns' property. 'fitcontent()' function value." src="https://codepen.io/naradesign/embed/QWyXOQX?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/QWyXOQX'>CSS 'grid-auto-rows/columns' property. 'fitcontent()' function value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### grid-area
 
