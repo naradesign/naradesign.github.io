@@ -732,13 +732,6 @@ span <integer>
 span <custom-ident> ⬅ 이 경우 <integer> 1 값을 생략한 것으로 본다.
 span <integer> <custom-ident>
 
-⬇ 선언 순서에 제약이 없기 때문에 아래와 같은 형식으로 나타날 수도 있다.
-<integer> span
-<custom-ident> span
-span <custom-ident> <integer>
-<integer> <custom-ident> span
-<custom-ident> <integer> span
-
 ⬇ [ <integer> || <custom-ident> ] 묶음 규칙에 따라 이런 순서는 허용하지 않는다.
 <integer> span <custom-ident> ❌
 <custom-ident> span <integer> ❌
