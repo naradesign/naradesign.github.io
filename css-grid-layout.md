@@ -27,13 +27,13 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
   * [grid-auto-flow](#grid-auto-flow)
   * [grid-auto-rows](#grid-auto-rows-grid-auto-columns)
   * [grid-auto-columns](#grid-auto-rows-grid-auto-columns)
-* ~~[grid-area](#grid-area)~~ ⬅️ 아이템의 배치와 병합, 아이템에 적용. // TODO:
-  * ~~[grid-row](#grid-row)~~ // TODO:
-    * ~~[grid-row-start](#grid-row-start)~~ // TODO:
-    * ~~[grid-row-end](#grid-row-end)~~ // TODO:
-  * ~~[grid-column](#grid-column)~~ // TODO:
-    * ~~[grid-column-start](#grid-column-start)~~ // TODO:
-    * ~~[grid-column-end](#grid-column-end)~~ // TODO:
+* [grid-area](#grid-area) ⬅️ 아이템의 배치와 병합, 아이템에 적용.
+  * ~~[grid-row](#grid-row-grid-column)~~ // TODO:
+    * ~~[grid-row-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+    * ~~[grid-row-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+  * ~~[grid-column](#grid-row-grid-column)~~ // TODO:
+    * ~~[grid-column-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+    * ~~[grid-column-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
 
 ### CSS 속성 값(value:) 정의 구문 해설
 
@@ -136,6 +136,7 @@ e f d c
 
 > * Name: '[grid](https://www.w3.org/TR/css-grid-1/#propdef-grid)'
 > * Value: [<‘grid-template’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template) \| [<‘grid-template-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows) / [ `auto-flow` && `dense`? ] [<‘grid-auto-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)? \| [ `auto-flow` && `dense`? ] [<‘grid-auto-rows’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)? / [<‘grid-template-columns’>](https://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns)
+> * Initial: see individual properties
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
 `grid` 속성 값 정의 구문을 분해해서 살펴보자. 공백(` `)으로 분리한 구문들은 하나의 그룹으로 묶고 단일 바(`|`)를 기준으로 분리해서 볼 수 있다. 결국 아래와 같이 3개의 선택 그룹(Option 1 `|` Option 2 `|` Option 3)으로 나뉜다. 단일바(`|`)의 의미에 따라 셋 중 하나의 구문을(하나만) 반드시 선언해야 한다.
@@ -590,59 +591,194 @@ auto ⮕ 초기 값이다. 컨테이너의 크기, 격자의 수, 포함한 콘�
 fit-content( <length-percentage> )
 ```
 
-<iframe height="360" style="width: 100%;" scrolling="no" title="CSS 'grid-auto-rows/columns' property. 'fitcontent()' function value." src="https://codepen.io/naradesign/embed/QWyXOQX?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/naradesign/pen/QWyXOQX'>CSS 'grid-auto-rows/columns' property. 'fitcontent()' function value.</a> by Jeong Chan-Myeong
+<iframe height="360" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-auto-rows/columns' property. 'fit-content()' function value." src="https://codepen.io/naradesign/embed/QWyXOQX?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/QWyXOQX'>CSS 'grid-auto-rows/columns' property. 'fit-content()' function value.</a> by Jeong Chan-Myeong
   (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ### grid-area
 
+`grid-area` 속성은 그리드 아이템의 배치와 병합을 제어한다. 그리드 컨테이너에서 `grid`, `grid-template-*` 속성에 적용한 '셀 이름' 또는 '줄 이름'을 참조하는 속성이다.
+
+`grid-row`, `grid-column` 속성의 단축 속성이다. `grid-row` 속성은 `grid-row-start/end` 속성의 단축이고 `grid-column` 속성은 `grid-column-start/end` 속성의 단축이다. 결국 `grid-area` 속성은 `grid-row-start/end`, `grid-column-start/end` 속성의 단축이다. 하위 속성들을 개별적으로 사용하는 것 보다 `grid-area` 속성으로 간결하게 선언하는 것을 권장한다.
+
+* [grid-area](#grid-area) ⬅️ 아이템의 배치와 병합, 아이템에 적용.
+* ~~[grid-row](#grid-row-grid-column)~~ // TODO:
+  * ~~[grid-row-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+  * ~~[grid-row-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+* ~~[grid-column](#grid-row-grid-column)~~ // TODO:
+  * ~~[grid-column-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+  * ~~[grid-column-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+
 > * Name: '[grid-area](https://www.w3.org/TR/css-grid-1/#propdef-grid-area)'
-> * Value:
+> * Value: \<grid-line\> [ / \<grid-line\> ]{0,3}
+> * Initial: see individual properties
 > * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
 
+`grid-area` 속성의 값 형식은 다음과 같다.
 
-### grid-row
+#### \<grid-line\>
+
+`<grid-line>` 형식의 값을 슬래시(`/`) 기호로 분리하여 1~4회 선언할 수 있다.
+
+```
+<grid-line> [ / <grid-line> ]{0,3}
+⬇
+<grid-line>
+<grid-line> / <grid-line>
+<grid-line> / <grid-line> / <grid-line>
+<grid-line> / <grid-line> / <grid-line> / <grid-line>
+⬇
+<'grid-row-start'> / <'grid-column-start'> / <'grid-row-end'> / <'grid-column-end'>
+```
+
+`grid-area` 속성의 값 형식은 결국 '`행의 시작` / `열의 시작` / `행의 종료` / `열의 종료`' 순서(시계 반대 방향)로 나타난다. `<grid-line>`은 다양한 형식으로 나타날 수 있으므로 분해해서 살펴보자.
+
+```
+<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || custom-ident> ] ]
+⬇
+auto ⬅ Option 1
+|
+<custom-ident> ⬅ Option 2
+|
+[ <integer> && <custom-ident>? ] ⬅ Option 3
+|
+[ span && [ <integer> || custom-ident> ] ] ⬅ Option 4
+```
+
+#### auto ⬅ Option 1
+
+`auto` 값은 배치 방향으로 하나의 아이템만 채워 넣을 때 사용한다. 셀 병합을 할 일이 없다면 이 값이 적절하다. 아래 예제 코드는 배치 결과가 모두 같다. `auto` 값이 어떤 역할을 하는지 이해하길 바란다.
+
+```
+grid-area: 2 / 2 / 3 / 3;
+grid-area: 2 / 2 / auto / auto;
+grid-area: 2 / 2;
+grid-area: auto / auto / 3 / 3;
+```
+
+<iframe height="480" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-area' property. 'auto' value." src="https://codepen.io/naradesign/embed/dyGxogG?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/dyGxogG'>CSS 'grid-area' property. 'auto' value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+#### \<custom-ident\> ⬅ Option 2
+
+`<custom-ident>`는 작성자 정의 식별자(Author-defined identifiers)이다. `grid`, `grid-template-*` 속성에서 미리 선언해 놓은(또는 암시적으로 생성된) '셀 이름' 또는 '줄 이름'을 참조하여 아이템을 배치할 때 이 구문을 사용한다. 대소문자를 구별하고 CSS에서 미리 정의한 키워드(예를 들면 `span`)는 사용할 수 없다. 이 값은 따옴표(`''`, `""`)를 사용하지 않는다. `<custom-ident>`는 맥락에 따라 '셀 이름' 또는 '줄 이름'이다. 만약 줄 이름과 똑같은 셀 이름이 있다면 셀 이름을 참조한다.
+
+```
+⬇ '셀 이름'을 참조하고 있다. 네 방향 모두 같은 이름으로 설정된다.
+grid-area: header;
+grid-area: main;
+grid-area: aside;
+grid-area: footer;
+
+⬇ == 아래와 같다.
+grid-area: header / header / header / header;
+grid-area: main / main / main / main;
+grid-area: aside / aside / aside / aside;
+grid-area: footer / footer / footer / footer;
+
+⬇ == 그리고 아래와 같다. grid-*-end 값을 생략했다.
+grid-area: header / header;
+grid-area: main / main;
+grid-area: aside / aside;
+grid-area: footer / footer;
+
+⬇ == 결국 아래와 같다. 암시적으로 생성된 '줄 이름'을 참조하고 있다.
+grid-area: header-start / header-start / header-end / header-end;
+grid-area: main-start / main-start / main-end / main-end;
+grid-area: aside-start / aside-start / aside-end / aside-end;
+grid-area: footer-start / footer-start / footer-end / footer-end;
+```
+
+<iframe height="420" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-area' property. '&lt;custom-ident&gt;' value." src="https://codepen.io/naradesign/embed/yLOBjyB?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/yLOBjyB'>CSS 'grid-area' property. '&lt;custom-ident&gt;' value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+#### [ \<integer\> && \<custom-ident\>? ] ⬅ Option 3
+
+`grid-area` 속성에서 줄 번호 `<integer>`를 참조하여 아이템을 배치할 때 이 구문을 사용한다. 작성자 정의 식별자 `<custom-ident>`와 함께 참조할 수 있다. 줄 번호와 줄 이름의 선언 순서를 바꿔도 된다. 줄 번호는 `1`부터 시작한다. 이 구문에서 정수 `0`은 유효하지 않다. 줄 번호에 빼기(`-`) 기호를 붙이면 반대 편으로부터의 순서를 의미한다.
+
+```
+⬇ <integer> 구문 사용 예. 줄 이름에는 의존하지 않음.
+grid-area: 1 / 1 / 3 / -2;
+```
+
+아래 예제는 줄 번호와 이름을 함께 참조하는 방법이다. 줄 이름이 있으면 줄 번호는 암시적으로 함께 생성된다. 줄 이름과 번호를 참조하여 첫 번째 아이템을 4개의 셀 공간에 배치해 보았다. 줄 이름으로 아이템을 배치하는 구문은 셀 이름에 의존하는 방식보다 코드가 조금 더 장황하고 판독이 어려울 수 있다. 실무에서 쓰려면 의미있는 줄 이름을 부여하길 바란다.
+
+```
+⬇ <integer> && <custom-ident>? 구문 사용 예
+grid-area: 1 Y / 1 X / 3 Y / -2 X;
+
+⬇ 더 간결하게. 같은 표현이다. <integer> 1의 생략으로 이해하길 바란다. 구문에서 <integer>는 생략할 수 없는 것으로 정의했지만 1은 예외다.
+grid-area: Y / X / 3 Y / -2 X;
+```
+
+<iframe height="520" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-area' property. '&lt;custom-ident&gt;' value." src="https://codepen.io/naradesign/embed/qBZWKOM?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/qBZWKOM'>CSS 'grid-area' property. '&lt;custom-ident&gt;' value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+#### [ span && [ \<integer\> || \<custom-ident\> ] ] ⬅ Option 4
+
+`grid-area` 속성은 `span`, `<integer>`, `<custom-ident>` 형식을 조합하여 셀 병합을 선언할 수 있는데 다음과 같은 형식으로 나타날 수 있다. `span` 키워드는 필수이고 `<integer>`, `<custom-ident>` 두 값 중 하나 이상 나타나야 하는데 묶어서 표기해야 한다. 결합 기호 더블 앰퍼샌드(`&&`)와 더블 바(`||`)는 값이 나타나는 순서에 제약이 없다.
+
+```
+[ span && [ <integer> || <custom-ident> ] ]
+⬇
+span <integer>
+span <custom-ident> ⬅ 이 경우 <integer> 1 값을 생략한 것으로 본다.
+span <integer> <custom-ident>
+
+⬇ 선언 순서에 제약이 없기 때문에 아래와 같은 형식으로 나타날 수도 있다.
+<integer> span
+<custom-ident> span
+span <custom-ident> <integer>
+<integer> <custom-ident> span
+<custom-ident> <integer> span
+
+⬇ [ <integer> || <custom-ident> ] 묶음 규칙에 따라 이런 순서는 허용하지 않는다.
+<integer> span <custom-ident> ❌
+<custom-ident> span <integer> ❌
+```
+
+`span` 키워드는 반대편에서 선택한 '줄 번호' 또는 '줄 이름'으로부터 `N`번째 '줄' 또는 `N`번째 '줄 이름'까지 병합을 의미한다. 예제 값의 패턴을 분석하면 쉽게 이해할 수 있다. 빼기(`-`) 기호는 반대편으로부터 순서를 헤아린다는 점 기억하자. 이해를 돕기 위해 다소 어려운 패턴의 예제를 만들었다. 이런 코드는 실무에서 환영받지 못 할 수 있다.
+
+```
+grid-area: A / span 2 A / span C / -1 A;
+
+⬇ == 아래와 같다.
+grid-row-start: A;
+grid-column-start: span 2 A;
+grid-row-end: span C;
+grid-column-end: -1 A;
+
+⬇ 아래와 같이 해석할 수 있다.
+행 A 1번 줄부터 ~ 행 C 1번째 줄까지 병합,
+열 A -1번 줄부터 ~ 열 A 2번째 줄까지 병합.
+```
+
+<iframe height="520" style="width: 100%; margin: 1em 0;" scrolling="no" title="CSS 'grid-area' property. 'span' value." src="https://codepen.io/naradesign/embed/eYZpLaw?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/naradesign/pen/eYZpLaw'>CSS 'grid-area' property. 'span' value.</a> by Jeong Chan-Myeong
+  (<a href='https://codepen.io/naradesign'>@naradesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+예제 패턴만으로 `grid-area` 속성의 값 구문 이해가 어렵다면 [CSS 그리드 모듈 35번 예제](https://www.w3.org/TR/css-grid-1/#example-198bb78c)를 참고하길 바란다.
+
+### grid-row, grid-column
 
 > * Name: '[grid-row](https://www.w3.org/TR/css-grid-1/#propdef-grid-row)'
 > * Value:
 > * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
 
 
-### grid-row-start
+### grid-row-start, grid-column-start, grid-row-end, grid-column-end
 
 > * Name: '[grid-row-start](https://www.w3.org/TR/css-grid-1/#propdef-grid-row-start)'
 > * Value:
 > * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
-
-
-### grid-row-end
-
-> * Name: '[grid-row-end](https://www.w3.org/TR/css-grid-1/#propdef-grid-row-end)'
-> * Value:
-> * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
-
-
-### grid-column
-
-> * Name: '[grid-column](https://www.w3.org/TR/css-grid-1/#propdef-grid-column)'
-> * Value:
-> * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
-
-
-### grid-column-start
-
-> * Name: '[grid-column-start](https://www.w3.org/TR/css-grid-1/#propdef-grid-column-start)'
-> * Value:
-> * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
-
-
-### grid-column-end
-
-> * Name: '[grid-column-end](https://www.w3.org/TR/css-grid-1/#propdef-grid-column-end)'
-> * Value:
-> * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
-
 
 
 ### 참고
