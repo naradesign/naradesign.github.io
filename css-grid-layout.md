@@ -28,12 +28,12 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
   * [grid-auto-rows](#grid-auto-rows-grid-auto-columns)
   * [grid-auto-columns](#grid-auto-rows-grid-auto-columns)
 * [grid-area](#grid-area) ⬅️ 아이템의 배치와 병합, 아이템에 적용.
-  * ~~[grid-row](#grid-row-grid-column)~~ // TODO:
-    * ~~[grid-row-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-    * ~~[grid-row-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-  * ~~[grid-column](#grid-row-grid-column)~~ // TODO:
-    * ~~[grid-column-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-    * ~~[grid-column-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
+  * [grid-row](#grid-row-grid-column)
+    * [grid-row-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
+    * [grid-row-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
+  * [grid-column](#grid-row-grid-column)
+    * [grid-column-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
+    * [grid-column-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
 
 ### CSS 속성 값(value:) 정의 구문 해설
 
@@ -518,7 +518,7 @@ grid: none / 1fr 2fr 3fr;
 `grid-auto-rows/columns` 속성은 크기가 정해지지 않은 암시적 트랙의 크기를 일괄 설정한다. 다시 말하면 `grid-template-rows/columns` 속성에서 제어하지 않고 있는 트랙의 크기를 일괄 설정하는 속성이다. `grid-template-rows/columns` 속성의 폴백(fallback)으로 봐도 좋다.
 
 > * Name: '[grid-auto-rows](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows)', '[grid-auto-columns](https://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns)'
-> * Value: `<track-size>`+
+> * Value: [\<track-size\>](https://www.w3.org/TR/css-grid-1/#typedef-track-size)+
 > * Initial: `auto`
 > * Applies to: [grid containers](https://www.w3.org/TR/css-grid-1/#grid-container)
 
@@ -602,20 +602,20 @@ fit-content( <length-percentage> )
 
 `grid-row`, `grid-column` 속성의 단축 속성이다. `grid-row` 속성은 `grid-row-start/end` 속성의 단축이고 `grid-column` 속성은 `grid-column-start/end` 속성의 단축이다. 결국 `grid-area` 속성은 `grid-row-start/end`, `grid-column-start/end` 속성의 단축이다. 하위 속성들을 개별적으로 사용하는 것 보다 `grid-area` 속성으로 간결하게 선언하는 것을 권장한다.
 
-* [grid-area](#grid-area) ⬅️ 아이템의 배치와 병합, 아이템에 적용.
-* ~~[grid-row](#grid-row-grid-column)~~ // TODO:
-  * ~~[grid-row-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-  * ~~[grid-row-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-* ~~[grid-column](#grid-row-grid-column)~~ // TODO:
-  * ~~[grid-column-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-  * ~~[grid-column-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)~~ // TODO:
-
-> * Name: '[grid-area](https://www.w3.org/TR/css-grid-1/#propdef-grid-area)'
-> * Value: \<grid-line\> [ / \<grid-line\> ]{0,3}
-> * Initial: see individual properties
-> * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
+* [grid-area](#grid-area)
+* [grid-row](#grid-row-grid-column)
+  * [grid-row-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
+  * [grid-row-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
+* [grid-column](#grid-row-grid-column)
+  * [grid-column-start](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
+  * [grid-column-end](#grid-row-start-grid-column-start-grid-row-end-grid-column-end)
 
 `grid-area` 속성의 값 형식은 다음과 같다.
+
+> * Name: '[grid-area](https://www.w3.org/TR/css-grid-1/#propdef-grid-area)'
+> * Value: [\<grid-line\>](https://www.w3.org/TR/css-grid-1/#typedef-grid-row-start-grid-line) [ / [\<grid-line\>](https://www.w3.org/TR/css-grid-1/#typedef-grid-row-start-grid-line) ]{0,3}
+> * Initial: see individual properties
+> * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
 
 #### \<grid-line\>
 
@@ -762,17 +762,106 @@ grid-column-end: -1 A;
 
 ### grid-row, grid-column
 
-> * Name: '[grid-row](https://www.w3.org/TR/css-grid-1/#propdef-grid-row)'
-> * Value:
+각각 `grid-row-start/end` 그리고 `grid-column-start/end` 속성의 단축이다. 슬래시(`/`) 기호를 기준으로 왼쪽은 `-start` 오른쪽은 `-end` 값을 선언한다. 이 속성을 사용하느니 단축 속성인 `grid-area` 속성으로 간결하게 작성하길 추천한다. 값의 상세한 해설을 [grid-area](#grid-area) 섹션에서 설명했다.
+
+> * Name: '[grid-row](https://www.w3.org/TR/css-grid-1/#propdef-grid-row)', '[grid-column](https://www.w3.org/TR/css-grid-1/#propdef-grid-column)'
+> * Value: [\<grid-line\>](https://www.w3.org/TR/css-grid-1/#typedef-grid-row-start-grid-line) [ / [\<grid-line\>](https://www.w3.org/TR/css-grid-1/#typedef-grid-row-start-grid-line) ]?
+> * Initial: see individual properties
 > * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
 
+두 번째 값을 생략할 수 있다. 첫 번째 값이 `<integer>`를 포함하면 생략한 두 번째 값은 `auto`가 된다. 첫 번째 값이 `<custom-ident>`라면 생략한 두 번째 값은 똑같은 `<custom-ident>`가 된다.
+
+```
+<grid-line> [ / <grid-line> ]?
+⬇
+<grid-line> / <grid-line>
+<grid-line> ⬅ 생략한 -end 값은 auto 또는 <custom-ident>
+⬇
+<'grid-*-start'> / <'grid-*-end'>
+<'grid-*-start'> ⬅ 생략한 -end 값은 auto 또는 <custom-ident>
+```
+
+`<grid-line>` 형식은 아래와 같이 다양한 구문으로 나타날 수 있다.
+
+```
+<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || custom-ident> ] ]
+⬇
+auto ⬅ Option 1
+|
+<custom-ident> ⬅ Option 2
+|
+[ <integer> && <custom-ident>? ] ⬅ Option 3
+|
+[ span && [ <integer> || custom-ident> ] ] ⬅ Option 4
+```
+
+실제 사용 예는 다음과 같다. `grid-area` 속성으로 간결하게 작성하길 바란다.
+
+```
+// <integer> 형식의 값 예제
+
+grid-row: 2 / 3;
+grid-column: 2 / 3;
+⬇
+grid-area: 2 / 2 / 3 / 3;
+
+grid-row: 2 / auto;
+grid-column: 2 / auto;
+⬇
+grid-area: 2 / 2 / auto / auto;
+
+grid-row: 2; ⬅ 생략한 -end 값은 auto
+grid-column: 2; ⬅ 생략한 -end 값은 auto
+⬇
+grid-area: 2 / 2; ⬅ 생략한 -end 값은 auto
+
+// <custom-ident> 형식의 값 예제
+
+grid-row: main / main;
+grid-column: main / main;
+⬇
+grid-area: main / main / main / main;
+⬇
+grid-area: main / main; ⬅ 생략한 -end 값은 main
+⬇
+grid-area: main; ⬅ 생략한 -start, -end 값은 main
+```
+
+예제 패턴만으로 `grid-row`, `grid-column` 속성의 값 구문 이해가 어렵다면 [CSS 그리드 모듈 35번 예제](https://www.w3.org/TR/css-grid-1/#example-198bb78c)를 참고하길 바란다.
 
 ### grid-row-start, grid-column-start, grid-row-end, grid-column-end
 
-> * Name: '[grid-row-start](https://www.w3.org/TR/css-grid-1/#propdef-grid-row-start)'
-> * Value:
+`grid-area` 단축 속성으로 간결하게 사용하길 바란다. 값의 상세한 해설을 [grid-area](#grid-area) 섹션에서 설명했다.
+
+> * Name: '[grid-row-start](https://www.w3.org/TR/css-grid-1/#propdef-grid-row-start)', '[grid-column-start](https://www.w3.org/TR/css-grid-1/#propdef-grid-column-start)', '[grid-row-end](https://www.w3.org/TR/css-grid-1/#propdef-grid-row-end)', '[grid-column-end](https://www.w3.org/TR/css-grid-1/#propdef-grid-column-end)'
+> * Value: [\<grid-line\>](https://www.w3.org/TR/css-grid-1/#typedef-grid-row-start-grid-line)
+> * Initial: `auto`
 > * Applies to: [grid items](https://www.w3.org/TR/css-grid-1/#grid-item)
 
+`<grid-line>` 형식은 아래와 같이 다양한 구문으로 나타날 수 있다.
+
+```
+<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || custom-ident> ] ]
+⬇
+auto ⬅ Option 1
+|
+<custom-ident> ⬅ Option 2
+|
+[ <integer> && <custom-ident>? ] ⬅ Option 3
+|
+[ span && [ <integer> || custom-ident> ] ] ⬅ Option 4
+```
+
+각 구문을 실제 코드로 표현해 보면 다음과 같다.
+
+```
+grid-row-start: auto;
+grid-column-start: main;
+grid-row-end: 3 Y;
+grid-column-end: span 2 A;
+```
+
+예제 패턴만으로 `grid-row-start`, `grid-column-start`, `grid-row-end`, `grid-column-end` 속성의 값 구문 이해가 어렵다면 [CSS 그리드 모듈 35번 예제](https://www.w3.org/TR/css-grid-1/#example-198bb78c)를 참고하길 바란다.
 
 ### 참고
 * [CSS Values and Units Module Level 3](https://www.w3.org/TR/css3-values/)
