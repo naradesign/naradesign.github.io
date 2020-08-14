@@ -1,5 +1,3 @@
-# naradesign.com
-
 * [CSS grid 레이아웃 문법과 예제.](css-grid-layout.md)
 * [예제로 이해하는 BEM.](bem-by-example.md)
 * [CSS flexible 레이아웃: flex item의 팽창과 수축.](flex-grow-shrink.md)
