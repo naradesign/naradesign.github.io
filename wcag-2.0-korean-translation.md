@@ -356,7 +356,7 @@
 
 <a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-reversible-all">예제 3.3.6</a>, <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html">이해 3.3.6</a>
 
-### 원칙 4: 신뢰 - 콘텐츠는 보조 기술을 포함한 다양한 사용자 응용 프로그램에 의하여 해석이 가능하도록 충분히 견고해야 한다.
+### 원칙 4: 견고 - 콘텐츠는 보조 기술을 포함한 다양한 사용자 응용 프로그램에 의하여 해석이 가능하도록 충분히 견고해야 한다.
 #### 지침 4.1 호환성: 보조 기술을 포함하여 현재와 미래의 사용자 응용 프로그램 호환성을 극대화 해야 한다.
 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat.html">지침 이해 4.1</a>
 
