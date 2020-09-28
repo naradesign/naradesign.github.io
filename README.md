@@ -20,3 +20,5 @@
 * [CSS3 `{font-size:*rem}` relative value.](font-size-rem.md)
 * [`a`, `button`, `label` 요소의 커서 모양.](cursor.md)
 * [글쓰기 기본 원칙, 참고 자료.](writing.md)
+* [자주 틀리는 한글 고쳐 쓰기.](korean-correction.md)
+* [읽기 쉬운 문장으로 고쳐 쓰기.](easy-to-read.md)
