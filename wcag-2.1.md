@@ -556,18 +556,20 @@ HTML accesskey 속성을 사용하는 경우 웹 브라우저의 'Alt, Ctrl, Shi
 > A best practice is to have the text of the label at the start of the name.
 
 #### 번역
-> **2.5.3. 이름에 레이블 지정 (Level A)**<br>
+> **2.5.3. 이름에 레이블 포함하기 (Level A)**<br>
 > [텍스트](https://www.w3.org/TR/WCAG21/#dfn-text) 또는 [텍스트 이미지](https://www.w3.org/TR/WCAG21/#dfn-images-of-text)를 포함한 [레이블](https://www.w3.org/TR/WCAG21/#dfn-labels)이 있는 [사용자 인터페이스 구성요소](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)의 [이름](https://www.w3.org/TR/WCAG21/#dfn-name)은 볼 수 있는 텍스트를 포함해야 한다.
 >
 > **참고**<br>
 > 이름 시작 부분에 레이블 텍스트를 두는 것이 가장 좋다.
 
 #### 해설
-사용자 인터페이스 구성요소(링크 또는 폼 콘트롤)를 식별하기 위해 보이는 이름을 제공하는 경우 텍스트 레이블로 처리해야 한다.
+지침 원문에서 쓰이는 레이블([label](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html#dfn-label))과 이름([name](https://www.w3.org/TR/WCAG21/#dfn-name))은 HTML 요소나 속성을 의미하지 않으므로 해석할 때 유의해야 한다. 이름은 보조기기에 제공하는 사용자 인터페이스 구성요소 설명(화면 표시 여부가 선택적)이고 레이블은 모든 사용자에게 표시하는 텍스트 설명이다.
 
-시각적으로 드러난 이름은 곧 텍스트 레이블이어야 하고 프로그램 방식(예를 들면 label 요소와 for 속성 연결)으로 결정해야 한다. 프로그램 방식으로 결정한 텍스트 레이블은 화면에 드러난 이름을 통해 음성 명령으로 접근 가능하다. 보이는 이름과 프로그램 방식으로 결정한 텍스트 레이블이 일치하지 않으면 이 성공 기준은 실패다.
+사용자 인터페이스 구성요소(링크 또는 폼 콘트롤)를 식별하기 위해 화면에 레이블(텍스트 설명, label 요소 아님)을 제공하는 경우 보조기기가 접근할 수 있는 이름(예: label/for, aria-labelledby, aria-label)과 일치해야 한다. 레이블과 이름이 일치하지 않는 경우 레이블은 접근 가능한 이름에 포함되어 있어야 한다.
 
-사용자 인터페이스 구성요소에 숨은 설명을 제공하는 경우 이 성공 기준을 적용하지 않는다. 이 성공 기준은 텍스트 레이블 이름이 화면에 보이는 경우에만 적용한다.
+시각적으로 드러난 레이블은 곧 텍스트 이름이어야 하고 프로그램 방식(예: label/for, aria-labelledby, aria-label)으로 결정해야 한다. 프로그램 방식으로 결정한 텍스트 이름은 화면에 드러난 레이블을 통해 음성 명령으로 접근 가능하다. 보이는 레이블이 프로그램 방식으로 결정한 텍스트 이름에 포함되지 않으면 이 성공 기준은 실패다. 보이는 레이블과 이름이 정확히 일치하지 않는 경우 레이블은 이름의 시작 부분에 배치하는 것이 좋다.
+
+사용자 인터페이스 구성요소에 완전히 숨은 이름을 제공하는 경우 이 성공 기준을 적용하지 않는다. 이 성공 기준은 레이블이 화면에 보이는 경우에만 적용한다.
 
 이 성공 기준을 준수하면 음성 입력 사용자는 사용자 인터페이스 구성요소에 접근할 수 있다. 또한 텍스트를 음성으로 듣는 사람은 드러난 레이블과 음성 설명이 일치하므로 혼란스럽지 않다.
 
@@ -577,13 +579,6 @@ HTML accesskey 속성을 사용하는 경우 웹 브라우저의 'Alt, Ctrl, Shi
 <button aria-label="이 사이트에서 찾기">검색</button>
 ```
 화면에는 '검색' 레이블 텍스트를 제공했으나 보조기기는 aria-label 속성에 더 높은 가중치를 두기 때문에 '이 사이트에서 찾기 클릭' 명령으로 검색을 시도해야 한다. 하지만 '이 사이트에서 찾기' 설명은 화면에 노출하지 않은 상태이기 때문에 음성 입력 사용자는 이용할 수 없다.
-
-**실패 사례:** 노출한 이름과 프로그래밍 방식으로 연결한 설명이 다름.<br>
-<img src="./img/wcag-21-253-2.png" alt="더보기 링크">
-```html
-<a href="#"><span class="a11y-hidden">공지사항</span> 더보기</a>
-```
-화면에는 '더보기' 링크 설명을 제공하지만 음성 입력 사용자는 '공지사항 더보기 클릭' 명령으로 이 링크를 실행할 수 있다. 그러나 '공지사항' 텍스트를 화면에서 숨겨놨기 때문에 음성 입력 사용자는 이용할 수 없다.
 
 **실패 사례:** 노출한 이름과 프로그래밍 방식으로 연결한 설명이 다름.<br>
 <img src="./img/wcag-21-253-1.png" alt="검색 버튼">
@@ -608,11 +603,22 @@ HTML accesskey 속성을 사용하는 경우 웹 브라우저의 'Alt, Ctrl, Shi
 <fieldset>
     <legend>Gender</legend>
     <input id="male" type="radio" name="gender">
-    <label for="male">
+    <label for="male">Male</label>
     <input id="female" type="radio" name="gender">
-    <label for="female">
+    <label for="female">Female</label>
 </fieldset>
 ```
+
+**성공 사례:** 이름과 레이블이 완전히 일치하지 않지만 보이는 레이블이 접근 가능한 이름의 앞 부분에 포함되어 있음.<br>
+<img src="./img/wcag-21-253-2.png" alt="더보기 링크">
+```html
+<h2 id="notice">공지사항</h2>
+...
+<a href="#">더보기 <span class="a11y-hidden">공지사항</span></a> // 보이는 텍스트가 접근 가능한 이름의 시작과 일치
+<a href="#" aria-labelledby="more notice"><span id="more">더보기</span></a> // 더보기 공지사항
+<a href="#" aria-label="더보기 공지사항">더보기</a> // 더보기 공지사항
+```
+화면에는 '더보기' 설명만을 제공하지만 보조기기에는 '더보기 공지사항' 이라는 이름을 제공한다. 일반적으로 추천하지 않지만 보조기기 사용자에게 구체적인 설명을 제공하는 목적으로 허용하는 방식이다.
 
 #### 참고
 * [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
