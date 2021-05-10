@@ -563,7 +563,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 ### position: sticky
-[caniuse](https://caniuse.com/css-sticky) | []()
+가장 가까운 스크롤 포트가 배치 기준. 부모 요소가 스크롤 포트에 보이는 동안 스크롤 포트(스크롤 컨테이너) 기준으로 고정. 부모 요소가 스크롤 밖으로 이탈하면 고정을 멈춤. 스크롤 포트, 부모 요소, 스티키 요소의 상태가 트리거.
+
+```
+.scroll { overflow: auto; } /* 스크롤 포트 */
+.parent { ... } /* 이 요소가 보이면 .sticky 요소는 스크롤 포트에 고정 */
+.sticky { position: sticky; top: 4px; } /* 고정하는 요소 */
+```
+
+[caniuse](https://caniuse.com/css-sticky) | [w3c](https://www.w3.org/TR/css-position-3/#sticky-position) | [test](https://codepen.io/naradesign/pen/GeBxqe)
 
 
 
@@ -584,14 +592,15 @@ h1, h2, h3, h4, h5, h6 {
 
 ### display: flow-root
 
-플로팅(float) 박스는 일반적인 흐름에서 벗어나기 때문에 부모 박스는 플로팅 박스 높이만큼 늘어나지 않는다. `display: flow-root` 속성은 포함 콘텐츠를 일반적인 흐름 속에 배치한다. 플로팅 요소를 사용할 때 clearfix라고 부르는 다양한 hack을 사용하지 않아도 된다.
+블록 상태가 된다. `block`과 다른 점은 포함 콘텐츠가 새 블록 형식 문맥(block formatting context)을 형성한다. 자식 요소의 `float`, `margin` 속성을 다르게 처리한다. 컨테이너 끝에서 `float`은 해제되고, 부모와 자식 사이의 수직 `margin`은 병합하지 않는다.
 
 ```
-.container { display: flow-root; }
-.float { float: left; }
+.flow-root { display: flow-root; }
+.float-child { float: left; } /* 부모 요소의 높이에 영향을 미침 */
+.margin-child { margin: 32px; } /* 부모-자식 수직 마진 중첩 안 됨 */
 ```
 
-[caniuse](https://caniuse.com/flow-root) | [test](https://codepen.io/naradesign/pen/ZELRWbR?editors=1100)
+[caniuse](https://caniuse.com/flow-root) | [test](https://codepen.io/naradesign/details/dyvyewz)
 
 
 
