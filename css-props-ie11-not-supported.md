@@ -580,8 +580,21 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-### var(--value)
-[caniuse](https://caniuse.com/css-variables) | []()
+### var(--my-value, fallback)
+
+재사용하려는 CSS 속성의 값을 변수에 담아 정의할 수 있다. 변수 이름은 이중 하이픈과 대소문자를 구별하는 문자의 조합(`--*`) 규칙을 따른다. 변수의 사용 범위는 선택자로 제한할 수 있다. 변수를 사용하려는 곳에서 `var()` 함수와 인자를 선언한다. 인자는 쉼표(`,`)와 함께 폴백을 제공할 수 있다.
+
+```
+/* Defining custom property */
+:root { --main-color: navy; }
+
+/* Using variable */
+p { color: var(--main-color, black); }
+```
+
+`var()` 함수에 유효하지 않은 값이 들어있는 경우 제공한 폴백이 있는지, 상속 받은 값이 있는지 순서대로 확인하고 유효한 값이 없으면 마지막으로 `initial`에 해당하는 값을 적용한다.
+
+[caniuse](https://caniuse.com/css-variables) | [w3c](https://www.w3.org/TR/css-variables-1/#using-variables)
 
 
 

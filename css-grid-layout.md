@@ -4,11 +4,10 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
 
 * [`inline-block`, `float`, `flex`, `grid` 중 가장 간결한 코드는?](https://codepen.io/naradesign/pen/oNbqRqe)
 * [`flex`에 없는 `grid`의 고유한 기능은?](https://codepen.io/naradesign/pen/QWyrEvj)
-* [`grid`에 없는 `flex`의 고유한 기능은?](https://codepen.io/naradesign/pen/gOPKOXE)
 
-`flex`와 `grid`는 컨테이너와 아이템 구조를 사용하는 점에서 같다. 그리고 설정한 방향으로 아이템을 배치한다는 점도 같다. 한편 `flex`는 레일(=) 위에 아이템을 배치하는 방식인데 `grid`는 격자(#) 위에 아이템을 배치하는 점이 다르다. `grid`는 진행 축이 아닌 방향으로 셀의 확장(병합)이 가능하다는 점도 `flex`와 다르다. `grid` 명세를 사용하면 레이아웃용 `<div>` 노드를 줄이는 데에도 도움이 된다.
+`flex`와 `grid`는 컨테이너와 아이템 구조를 사용하는 점에서 같다. 그리고 설정한 방향으로 아이템을 배치한다는 점도 같다. 한편 `flex`는 단일 축을 따라 레일(=) 위에 아이템을 쌓는 방식인데 `grid`는 2개 축을 모두 활용하여 격자(#) 위에 아이템을 배치하는 점이 다르다. `grid`는 진행 축이 아닌 방향으로 셀의 확장(병합)이 가능하다는 점도 `flex`와 다르다.
 
-아직 `flex`에 익숙하지 않다면 `flex`에 익숙해진 후 `grid`를 학습하길 권한다. `grid` 모듈은 조금 더 복잡하다.
+아직 `flex`에 익숙하지 않다면 `flex`에 익숙해진 후 `grid`를 학습하길 권한다. `flex`만으로도 충분히 다양한 요구의 배치를 구현할 수 있지만 `grid` 모듈은 더 기능이 많고 복잡하다.
 
 ### 속성 색인
 
@@ -37,7 +36,7 @@ CSS `flex`와 `grid`를 사용하지 않아도 상상할 수 있는 모든 레�
 
 ### CSS 속성 값(value:) 정의 구문 해설
 
-CSS Grid 모듈의 명세를 정확하게 이해하려면 구성요소 값 결합 기호(Component Value Combinators)와 구성요소 값 곱수 기호(Component Value Multipliers)를 판독할 수 있어야 한다. 아래 예제는 `gap` 속성의 값을 기술하는 명세다. 간결하지만 많은 정보를 포함한다.
+CSS Grid 모듈의 명세를 정확하게 이해하려면 [구성요소 값 결합 기호(Component Value Combinators)와 구성요소 값 증가 기호(Component Value Multipliers)](https://www.w3.org/TR/css3-values/#component-combinators)를 판독할 수 있어야 한다. 아래 예제는 `gap` 속성의 값을 기술하는 명세다. 간결하지만 많은 정보를 포함한다.
 
 > * Name: 'gap'
 > * Value: <'row-gap'> <'column-gap'>?
@@ -72,9 +71,9 @@ e f d
 e f d c
 ```
 
-#### 구성요소 값 곱수 기호(Component Value Multipliers)
+#### 구성요소 값 증가 기호(Component Value Multipliers)
 
-값 명세에서 값 형식 뒤에 곱수 기호가 있으면 선언 횟수에 제한이 있다는 것을 의미한다.
+값 명세에서 값 형식 뒤에 증가 기호가 있으면 선언 횟수에 제한이 있다는 것을 의미한다.
 
 * 애스터리스크(`*`): 횟수 제한 없음. 0, 1, 2 ... ∞ 모두 가능.
 * 더하기(`+`): 1회 이상 필요.
@@ -99,7 +98,7 @@ e f d c
 </iframe>
 
 ### gap
-`gap`은 `grid` 모듈을 통해 [~~`grid-gap`~~](https://www.w3.org/TR/css-align-3/#gap-legacy) 이라는 이름으로 탄생했지만 현재는 더 다양한 의도로 사용하기 위해 속성 이름을 `gap`으로 바꾸고 [CSS 박스 정렬 모듈(CSS Box Alignment Module Level 3)](https://www.w3.org/TR/css-align-3/#gap-shorthand)의 속성이 됐다. `gap`은 `grid` 전용 모듈이 아님에도 불구하고 `grid` 배치할 때 필수 속성으로 간주하기 때문에 여기서 설명한다.
+`gap`은 `grid` 모듈을 통해 [~~`grid-gap`~~](https://www.w3.org/TR/css-align-3/#gap-legacy) 이라는 이름으로 탄생했지만 현재는 더 다양한 의도로 사용하기 위해 속성 이름을 `gap`으로 바꾸고 [CSS 박스 정렬 모듈(CSS Box Alignment Module Level 3)](https://www.w3.org/TR/css-align-3/#gap-shorthand)의 속성이 됐다. `gap`은 `grid` 전용 모듈이 아님에도 불구하고 `grid` 배치할 때 꼭 필요한 속성이기 때문에 여기서 설명한다.
 
 > * Name: '[gap](https://www.w3.org/TR/css-align-3/#gap-shorthand)'
 > * Value: [<'row-gap'>](https://www.w3.org/TR/css-align-3/#propdef-row-gap) [<'column-gap'>](https://www.w3.org/TR/css-align-3/#propdef-column-gap)?
@@ -333,7 +332,7 @@ grid-area: row / col / span 2 / span 2;
 <track-list> = [ <track-size> | <track-repeat> ]+ 😃
 ```
 
-단일 바를(`|`) 사용했으므로 두 값 형식 중 하나의 값이 필수이고 더하기(`+`) 곱수 기호를 사용했으므로 그룹(`[]`) 내부의 값은 1회 이상 반복해서 선언할 수 있다. `<track-repeat>` 형식은 `<track-size>`의 반복문인 `repeat()` 함수를 나타낸다. `repeat()` 함수의 첫 번째 인자는 반복 횟수이고 두 번째 인자는 트랙 목록으로 하나 이상의 크기(`px`, `%`, `fr`, `auto`...) 값을 공백으로 분리하여 나열할 수 있다. 실제 사용 형식은 다음과 같다.
+단일 바를(`|`) 사용했으므로 두 값 형식 중 하나의 값이 필수이고 더하기(`+`) 증가 기호를 사용했으므로 그룹(`[]`) 내부의 값은 1회 이상 반복해서 선언할 수 있다. `<track-repeat>` 형식은 `<track-size>`의 반복문인 `repeat()` 함수를 나타낸다. `repeat()` 함수의 첫 번째 인자는 반복 횟수이고 두 번째 인자는 트랙 목록으로 하나 이상의 크기(`px`, `%`, `fr`, `auto`...) 값을 공백으로 분리하여 나열할 수 있다. 실제 사용 형식은 다음과 같다.
 
 ```
 grid-template-rows: 80px 120px;
