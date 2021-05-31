@@ -447,7 +447,7 @@ grid-template-areas: '. . .';
 이런 코드는 거의 사용할 일이 없겠지만 `grid-template-*` 속성을 사용하지 않고 간격이 균일한 셀을 생성하려고 할 때 유용할 수 있다. 사용할 일이 없다고 표현한 이유는 셀의 크기를 명시하기 위해 `grid-template-*` 속성 값(트랙의 수와 크기)을 사용하는 경우가 일반적이고 그것만으로 익명의 셀이 생성되기 때문이다.
 
 ```
-grid-template-areas: '. . .';
+grid-template-areas: '. . .'; /* ⚠️셀에 다른 분량의 콘텐츠를 포함한 경우 이 방식의 셀 크기는 균일하지 않다. */
 ==
 grid-template-columns: 1fr 1fr 1fr;
 ==
@@ -634,7 +634,7 @@ fit-content( <length-percentage> )
 `grid-area` 속성의 값 형식은 결국 '`행의 시작` / `열의 시작` / `행의 종료` / `열의 종료`' 순서(시계 반대 방향)로 나타난다. `<grid-line>`은 다양한 형식으로 나타날 수 있으므로 분해해서 살펴보자.
 
 ```
-<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || custom-ident> ] ]
+<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || <custom-ident> ] ]
 ⬇
 auto ⬅ Option 1
 |
@@ -642,7 +642,7 @@ auto ⬅ Option 1
 |
 [ <integer> && <custom-ident>? ] ⬅ Option 3
 |
-[ span && [ <integer> || custom-ident> ] ] ⬅ Option 4
+[ span && [ <integer> || <custom-ident> ] ] ⬅ Option 4
 ```
 
 #### auto ⬅ Option 1
@@ -783,7 +783,7 @@ grid-column-end: -1 A;
 `<grid-line>` 형식은 아래와 같이 다양한 구문으로 나타날 수 있다.
 
 ```
-<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || custom-ident> ] ]
+<grid-line> = auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || <custom-ident> ] ]
 ⬇
 auto ⬅ Option 1
 |
@@ -791,7 +791,7 @@ auto ⬅ Option 1
 |
 [ <integer> && <custom-ident>? ] ⬅ Option 3
 |
-[ span && [ <integer> || custom-ident> ] ] ⬅ Option 4
+[ span && [ <integer> || <custom-ident> ] ] ⬅ Option 4
 ```
 
 실제 사용 예는 다음과 같다. `grid-area` 속성으로 간결하게 작성하길 바란다.
