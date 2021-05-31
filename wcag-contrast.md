@@ -43,17 +43,17 @@ WCAG 2.0 지침은 명암의 강도를 `1~21` 단계로 나누고 명암을 전�
 모든 예를 표시할 수 없기 때문에 일반적으로 널리 사용되고 있는 흰색 배경에 무채색 글자를 표현 하였습니다. 붉은색 글씨로 `Passed` 표시가 된 글꼴의 명도 대비는 적어도 WCAG 2.0의 `AA`(지침1.4.3) 또는 `AAA`(지침1.4.6) 수준을 만족한다는 의미 입니다. 이 표로 알 수 있는 것은 `12px` 글꼴을 사용할 때 회색의 밝기는 적어도 `#767676` 이 되어야만 '노안, 약시, 또는 일시적으로 정상 시력을 갖지 못한 사람들'에게 웹 문서가 편안하게 보인다는 사실입니다. 이 밖의 다양한 글꼴 색 또는 배경 색에 대한 조합은 앞서 소개드린 분석 도구들을 사용하여 도움을 받으시기 바랍니다.
 
 <table>
-    <caption>WCAG 2.0 기준(보통 문자, 큰 문자)에 따라 다양한 명도 대비를 보여주는 표(`Passed`는 적합한 수준임)</caption>
+    <caption style="font-weight:700">WCAG 2.x 명도 대비 확인 표</caption>
     <tbody>
         <tr>
             <th scope="col">Contrast Ratio</th>
             <th scope="col"><abbr title="ForeGround">FG</abbr>/<abbr title="BackGround">BG</abbr> Color</th>
             <th scope="col">Normal Text <br>
-            12pt(16px, 1em, 100%) + Normal</th>
-            <th scope="col">Large Text <br>
-            14pt(19px, 1.2em, 120%) + Bold</th>
-            <th scope="col">Large Text <br>
-            18pt(24px, 1.5em, 150%) + Normal</th>
+            16px + Normal</th>
+            <th scope="col">Large Text(1) <br>
+            19px + Bold</th>
+            <th scope="col">Large Text(2) <br>
+            24px + Normal</th>
         </tr>
         <tr style="color:#000000">
             <th scope="row">21:1</th>
