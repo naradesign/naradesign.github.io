@@ -1,6 +1,8 @@
 ## IE11을 버리면 사용할 수 있는 CSS 명세.
 
-### background-clip
+
+
+### background-clip:
 
 `background-clip` 속성은 배경 영역을 설정한다.
 
@@ -35,7 +37,7 @@ width: calc(var(--variable-width) + 20px);
 
 
 
-### ch
+### ch unit
 
 현재 글꼴에서 문자 '0'의 폭을 나타내는 단위로 주로 고정폭 글꼴에서 사용.
 
@@ -47,7 +49,7 @@ width: 80ch;
 
 
 
-### all, initial, unset, revert
+### all:
 
 `all` 속성은 모든 CSS 속성을 재설정하기 위한 단축 속성이다.
 
@@ -78,7 +80,7 @@ all: revert; // unset과 같지만 ua 스타일이 있으면 따른다.
 
 
 
-### appearance ⚠️
+### appearance: ⚠️
 
 주로 폼 콘트롤 요소의 기본 스타일을 제어하는 속성. 값을 `none`으로 설정하면 UA 스타일을 사용자 정의 스타일로 덮어 쓸 수 있다.
 
@@ -93,7 +95,7 @@ appearance: none;
 
 
 
-### background-blend-mode
+### background-blend-mode:
 
 배경에 쌓은 '이미지, 그라디언트, 색'을 혼합할 수 있다.
 
@@ -132,7 +134,7 @@ box-decoration-break: clone;
 
 
 
-### caret-color
+### caret-color:
 
 텍스트 입력이 가능한 곳에 표시하는 입력 커서의 색상을 설정할 수 있다.
 
@@ -164,7 +166,7 @@ caret-color: red;
 
 
 
-### clip-path
+### clip-path:
 
 `clip-path` 속성은 모양을 지정하여 표시 영역을 정의하는 속성이다. 다양한 도형으로 잘라낸 표현을 할 수 있다.
 
@@ -257,7 +259,7 @@ CSS 값을 사용할 수 있는 다양한 위치(예를 들면 `@` 규칙 또는
 
 
 
-### filter
+### filter:
 
 필터 효과를 재현할 수 있다.
 
@@ -287,7 +289,7 @@ fieldset:focus-within { background: silver; }
 
 
 
-### font-display
+### font-display:
 
 웹 폰트를 완전히 로딩하기 전 글꼴을 어떻게 표시할지 결정한다. `@font-face` 규칙에 사용할 수 있다. 보통 대체 글꼴 표시 후 로딩한 글꼴로 바꿔 표시하는 `swap` 값을 권장한다.
 
@@ -388,7 +390,7 @@ progress:indeterminate { ... }
 
 
 
-### line-clamp
+### line-clamp: ⚠️
 
 텍스트 콘텐츠가 박스를 넘치는 경우 설정한 위치에서 말줄임 기호를 표시할 수 있다.
 
@@ -411,21 +413,21 @@ w3c 초안에서는 `max-lines`, `block-ellipsis`, `continue`의 단축 속성�
 
 ### min(), max(), clamp()
 
-비교 함수라고 부른다. 계산식으로 구성한 여러 인자 중 하나의 값을 반환한다. `min()` 함수는 작은 값을 반환하고 `max()` 함수는 가장 큰 값을 반환한다. `clamp()` 함수는 '최젓값, 선호값, 최댓값' 이렇게 3개의 인자로 구성한다.
+비교 함수라고 부른다. 계산식으로 구성한 여러 인자 중 하나의 값을 반환한다. `min()` 함수는 작은 값을 반환하고 `max()` 함수는 가장 큰 값을 반환한다. `clamp()` 함수는 '최솟값, 선호값, 최댓값' 이렇게 3개의 인자로 구성한다.
 
 ```
 width: min(240px, 48%); // 가장 작은 평가값 반환
 width: max(240px, 48%, 72vw); // 가장 큰 평가값 반환
-width: clamp(240px, 48%, 24vw * 3); // 최젓값 ~ 최댓값 사이의 선호값 반환
+width: clamp(240px, 48%, 24vw * 3); // 최솟값 ~ 최댓값 사이의 선호값 반환
 ```
 
-`calc()` 함수의 모든 인자 형식은 비교 함수에서도 사용할 수 있다. 선호값은 최젓값과 최댓값 사이를 벗어나지 않는다.
+`calc()` 함수의 모든 인자 형식은 비교 함수에서도 사용할 수 있다. 선호값은 최솟값과 최댓값 사이를 벗어나지 않는다.
 
 [caniuse](https://caniuse.com/css-math-functions) | [w3c](https://drafts.csswg.org/css-values-4/#comp-func)
 
 
 
-### interaction media features
+### interaction @media features
 
 상호작용 미디어 피처를 통해 포인팅 장치의 유무와 정확도 그리고 호버 가능 여부를 판단할 수 있다. 이 기능을 사용할 때 포인팅 장치를 사용할 수 없는 사용자를 차별하지 않도록 주의해야 한다.
 
@@ -521,7 +523,7 @@ background: #fff;
 
 
 
-### shape-outside, shape-margin, shape-image-threshold
+### shape-outside:, shape-margin:, shape-image-threshold:
 
 `float` 스타일을 확장하는 속성이다. `float` 요소 주변의 인라인 텍스트가 흐르는 형태를 정의한다. `shape-outside` 속성은 [\<basic-shape\>](https://www.w3.org/TR/css-shapes/#typedef-basic-shape) 형태 함수를 지원한다. `url()` 값을 사용하면 이미지 알파 채널 기반으로 인라인 텍스트가 흐르도록 만드는 것도 가능하다.
 
@@ -541,7 +543,8 @@ shape-image-threshold: 0;
 [caniuse](https://caniuse.com/css-shapes) | [w3c](https://www.w3.org/TR/css-shapes/) | [test](https://codepen.io/naradesign/pen/ZELaqVK?editors=1100)
 
 
-### scroll-snap-type, scroll-snap-align
+
+### scroll-snap-type:, scroll-snap-align:
 
 설정한 축(`x`, `y`, `both`...)으로 스크롤할 때 자손 아이템이 스크롤 컨테이너에 들러붙는 성질(`proximity`, `mandatory`)을 제어할 수 있다.
 
@@ -575,8 +578,18 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-### text-orientation
-[caniuse](https://caniuse.com/css-text-orientation) | []()
+### text-orientation:
+
+텍스트 방향([writing-mode](https://drafts.csswg.org/css-writing-modes-3/#block-flow))이 세로 모드인 경우 알파벳과 CJK 문자를 어떤 방향으로 회전하여 표시할지 결정하는 속성.
+
+```
+writing-mode: vertical-rl;
+text-orientation: mixed | upright | sideways;
+```
+
+초깃값 `mixed`는 알파벳을 눕히고 CJK는 세움. `upright` 값은 세움으로 통일. `sideways` 값은 눕히는 방향으로 통일. W3C 명세 예시를 참고할 것.
+
+[caniuse](https://caniuse.com/css-text-orientation) | [w3c](https://drafts.csswg.org/css-writing-modes-3/#text-orientation)
 
 
 
@@ -598,8 +611,17 @@ p { color: var(--main-color, black); }
 
 
 
-### tab-size
-[caniuse](https://caniuse.com/css3-tabsize) | []()
+### tab-size:
+
+탭 문자(U+0009)를 표시할 때 탭 문자의 크기를 결정하는 속성이다. 초깃값은 숫자 `8`으로 숫자 값은 공백 문자(U+0020)의 배수를 의미한다. 음수는 허용하지 않는다.
+
+```
+tab-size: <number> | <length>
+```
+
+일반적인 상황이라면  `<number>` 값을 사용하는 것이 적절해 보인다.
+
+[caniuse](https://caniuse.com/css3-tabsize) | [w3c](https://www.w3.org/TR/css-text-3/#tab-size)
 
 
 
@@ -618,61 +640,99 @@ p { color: var(--main-color, black); }
 
 
 ### font-family: system-ui
-[caniuse](https://caniuse.com/font-family-system-ui) | []()
+
+웹 글꼴을 OS(운영 체제) 기본 글꼴로 표시할 수 있다.
+
+```
+font-family: system-ui;
+```
+
+[caniuse](https://caniuse.com/font-family-system-ui) | [w3c](https://drafts.csswg.org/css-fonts-4/#system-ui-def)
 
 
 
-### font-kerning
-[caniuse](https://caniuse.com/font-kerning) | []()
+### font-kerning:
+
+`font-kerning` 속성은 글자 모양 때문에 배열이 어색한 문자에 적당한 간격을 두어 시각적으로 매끄럽게 보이도록 조정한다. 커닝 활성화가 가능한 오픈타입(.otf) 글꼴에만 적용할 수 있다. 초기값은 `auto`이고 브라우저 설정에 따르는데 보통은 `normal`과 같다. `none` 값은 글자 사이 간격을 보정하지 않는다.
+
+```
+font-kerning: auto | normal | none;
+```
+
+[caniuse](https://caniuse.com/font-kerning) | [w3c](https://www.w3.org/TR/css-fonts-3/#font-kerning-prop)
 
 
 
-### font-variant-numeric
-[caniuse](https://caniuse.com/font-variant-numeric) | []()
+### font-variant-numeric:
+
+오픈타입(.otf) 글꼴에서 숫자의 모양을 제어할 수 있다. 오픈타입 글꼴은 다양한 변형을 제공하기 때문에 가변 글꼴이라고 부르기도 한다. 오픈타입 글꼴이라고 해서 모든 형태의 값을 지원하는 것은 아니다.
+
+normal | [ \<numeric-figure-values\> || \<numeric-spacing-values\> || \<numeric-fraction-values\> || ordinal || slashed-zero ]
+
+```
+font-variant-numeric: normal; // 적용하지 않음
+font-variant-numeric: lining-nums | oldstyle-nums; // 숫자의 수직 위치
+font-variant-numeric: proportional-nums | tabular-nums; // 숫자의 폭
+font-variant-numeric: diagonal-fractions | stacked-fractions; // 분수 표현
+font-variant-numeric: ordinal; // 서수를 위첨자로
+font-variant-numeric: slashed-zero; // 숫자 0에 슬래시 포함
+```
+
+[caniuse](https://caniuse.com/font-variant-numeric) | [test](https://code.thisarmy.com/fontsinfo/) | [w3c](https://drafts.csswg.org/css-fonts-3/#propdef-font-variant-numeric)
 
 
 
 ### justify-content: space-evenly
-[caniuse](https://caniuse.com/justify-content-space-evenly) | []()
+
+다중 열 컨테이너, 플렉스 컨테이너, 그리드 컨테이너에 적용할 수 있는 수평 정렬 옵션 중 하나로 컨테이너와 아이템 사이에 발생하는 모든 공간의 크기가 균일하다.
+
+```
+justify-content: space-evenly
+```
+
+[caniuse](https://caniuse.com/justify-content-space-evenly) | [w3c](https://drafts.csswg.org/css-align-3/#distribution-values)
 
 
 
-### text-rendering
-[caniuse](https://caniuse.com/kerning-pairs-ligatures) | []()
+### object-fit:, object-position:
+
+너비와 높이를 고정한 박스에서 이미지(img) 또는 영상(video) 콘텐츠의 '비율, 크기, 위치'를 결정한다. 콘텐츠의 비율을 원본과 동일하게 유지해 주는 `contain`, `cover`와 같은 값이 유용하다.
+
+```
+object-fit: contain | cover;
+object-position: 80px 160px;
+```
+
+[caniuse](https://caniuse.com/object-fit) | [test](https://codepen.io/naradesign/pen/KKWjVGB) | [w3c](https://drafts.csswg.org/css-images-3/#the-object-fit)
 
 
 
-### object-fit, object-position
-[caniuse](https://caniuse.com/object-fit) | []()
-
-
-
-### prefers-color-scheme media feature
+### prefers-color-scheme @media feature
 [caniuse](https://caniuse.com/prefers-color-scheme) | []()
 
 
 
-### prefers-reduced-motion
+### prefers-reduced-motion:
 [caniuse](https://caniuse.com/prefers-reduced-motion) | []()
 
 
 
-### text-decoration-*
+### text-decoration-*:
 [caniuse](https://caniuse.com/text-decoration) | []()
 
 
 
-### text-emphasis
+### text-emphasis:
 [caniuse](https://caniuse.com/text-emphasis) | []()
 
 
 
-### font-variation-settings
+### font-variation-settings:
 [caniuse](https://caniuse.com/variable-fonts) | []()
 
 
 
-### will-change
+### will-change:
 [caniuse](https://caniuse.com/will-change) | []()
 
 
