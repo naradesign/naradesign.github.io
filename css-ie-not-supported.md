@@ -1,4 +1,4 @@
-## IE11을 버리면 사용할 수 있는 CSS 명세.
+## IE를 버리면 사용할 수 있는 CSS 명세.
 
 
 
@@ -667,7 +667,7 @@ font-kerning: auto | normal | none;
 
 오픈타입(.otf) 글꼴에서 숫자의 모양을 제어할 수 있다. 오픈타입 글꼴은 다양한 변형을 제공하기 때문에 가변 글꼴이라고 부르기도 한다. 오픈타입 글꼴이라고 해서 모든 형태의 값을 지원하는 것은 아니다.
 
-normal \| [ \<numeric-figure-values\> || \<numeric-spacing-values\> || \<numeric-fraction-values\> || ordinal || slashed-zero ]
+normal \| [ \<numeric-figure-values\> \|\| \<numeric-spacing-values\> \|\| \<numeric-fraction-values\> \|\| ordinal \|\| slashed-zero ]
 
 ```
 font-variant-numeric: normal; // 적용하지 않음
@@ -727,6 +727,10 @@ object-position: 80px 160px;
 ```
 
 [caniuse](https://caniuse.com/prefers-color-scheme) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme) \| [test](https://codepen.io/naradesign/pen/RwpzvYx)
+
+
+
+### ---------- 작성중 ----------
 
 
 
