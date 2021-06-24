@@ -130,7 +130,7 @@ box-decoration-break: clone;
 
 `background`, `border`, `box-shadow` 등의 속성에 영향을 준다. 초기값은 `slice`이다.
 
-[caniuse](https://caniuse.com/css-boxdecorationbreak) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break) \| [test](https://codepen.io/naradesign/pen/rNWppEr)
+[caniuse](https://caniuse.com/css-boxdecorationbreak) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break) \| [demo](https://codepen.io/naradesign/pen/rNWppEr)
 
 
 
@@ -344,7 +344,7 @@ background-image: image-set(
 
 제조사 접두어를 붙여야 한다. `-webkit-image-set()` ⚠️실험중(2021-04)
 
-[caniuse](https://caniuse.com/css-image-set) \| [test](https://cloudfour.com/examples/image-set/)
+[caniuse](https://caniuse.com/css-image-set) \| [demo](https://cloudfour.com/examples/image-set/)
 
 
 
@@ -386,7 +386,7 @@ progress:indeterminate { ... }
 
 `checkbox` 요소의 `checked` 상태가 `true`도 아니고 `false`도 아닐 때 선택. `radio` 그룹에서 어떤 요소도 `checked` 상태가 아닐 때 선택. `progress` 요소에 `value` 값을 지정하지 않았을 때 선택.
 
-[caniuse](https://caniuse.com/css-indeterminate-pseudo) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) \| [test](https://codepen.io/naradesign/pen/jOyLoEW?editors=1100)
+[caniuse](https://caniuse.com/css-indeterminate-pseudo) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) \| [demo](https://codepen.io/naradesign/pen/jOyLoEW?editors=1100)
 
 
 
@@ -540,7 +540,7 @@ shape-image-threshold: 0;
 
 외부 이미지 자원은 이미지를 제공하는 서버측 CORS 설정에 따라 표시 여부가 결정된다. 외부 이미지 자원의 CORS가 허용되지 않으면 `shape-outside` 속성은 무시된다.
 
-[caniuse](https://caniuse.com/css-shapes) \| [w3c](https://www.w3.org/TR/css-shapes/) \| [test](https://codepen.io/naradesign/pen/ZELaqVK?editors=1100)
+[caniuse](https://caniuse.com/css-shapes) \| [w3c](https://www.w3.org/TR/css-shapes/) \| [demo](https://codepen.io/naradesign/pen/ZELaqVK?editors=1100)
 
 
 
@@ -561,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 
 `scroll-margin`, `scroll-padding` 속성으로 스냅 위치를 정밀하게 제어할 수 있다.
 
-[caniuse](https://caniuse.com/css-snappoints) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts) \| [test](https://webkit.org/demos/scroll-snap/index.html)
+[caniuse](https://caniuse.com/css-snappoints) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts) \| [demo](https://webkit.org/demos/scroll-snap/index.html)
 
 
 
@@ -574,7 +574,7 @@ h1, h2, h3, h4, h5, h6 {
 .sticky { position: sticky; top: 4px; } /* 고정하는 요소 */
 ```
 
-[caniuse](https://caniuse.com/css-sticky) \| [w3c](https://www.w3.org/TR/css-position-3/#sticky-position) \| [test](https://codepen.io/naradesign/pen/GeBxqe)
+[caniuse](https://caniuse.com/css-sticky) \| [w3c](https://www.w3.org/TR/css-position-3/#sticky-position) \| [demo](https://codepen.io/naradesign/pen/GeBxqe)
 
 
 
@@ -635,7 +635,7 @@ tab-size: <number> | <length>
 .margin-child { margin: 32px; } /* 부모-자식 수직 마진 중첩 안 됨 */
 ```
 
-[caniuse](https://caniuse.com/flow-root) \| [test](https://codepen.io/naradesign/details/dyvyewz)
+[caniuse](https://caniuse.com/flow-root) \| [demo](https://codepen.io/naradesign/details/dyvyewz)
 
 
 
@@ -678,7 +678,7 @@ font-variant-numeric: ordinal; // 서수를 위첨자로
 font-variant-numeric: slashed-zero; // 숫자 0에 슬래시 포함
 ```
 
-[caniuse](https://caniuse.com/font-variant-numeric) \| [test](https://code.thisarmy.com/fontsinfo/) \| [w3c](https://drafts.csswg.org/css-fonts-3/#propdef-font-variant-numeric)
+[caniuse](https://caniuse.com/font-variant-numeric) \| [demo](https://code.thisarmy.com/fontsinfo/) \| [w3c](https://drafts.csswg.org/css-fonts-3/#propdef-font-variant-numeric)
 
 
 
@@ -703,7 +703,7 @@ object-fit: contain | cover;
 object-position: 80px 160px;
 ```
 
-[caniuse](https://caniuse.com/object-fit) \| [test](https://codepen.io/naradesign/pen/KKWjVGB) \| [w3c](https://drafts.csswg.org/css-images-3/#the-object-fit)
+[caniuse](https://caniuse.com/object-fit) \| [demo](https://codepen.io/naradesign/pen/KKWjVGB) \| [w3c](https://drafts.csswg.org/css-images-3/#the-object-fit)
 
 
 
@@ -726,7 +726,7 @@ object-position: 80px 160px;
 }
 ```
 
-[caniuse](https://caniuse.com/prefers-color-scheme) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme) \| [test](https://codepen.io/naradesign/pen/RwpzvYx)
+[caniuse](https://caniuse.com/prefers-color-scheme) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme) \| [demo](https://codepen.io/naradesign/pen/RwpzvYx)
 
 
 
