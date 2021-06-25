@@ -709,7 +709,7 @@ object-position: 80px 160px;
 
 ### prefers-color-scheme @media feature
 
-사용자가 밝거나 어두운 색상 테마를 운영 체제에 설정했는지 감지하는 미디어 쿼리.
+사용자가 색상 테마를 운영 체제에 설정했는지 감지하는 미디어 쿼리.
 
 ```
 @media (prefers-color-scheme: light) {
@@ -730,12 +730,29 @@ object-position: 80px 160px;
 
 
 
+### prefers-reduced-motion @media feature
+
+사용자가 동작 줄이기를 운영 체제에 설정했는지 감지하는 미디어 쿼리.
+
+```
+@media (prefers-reduced-motion: no-preference) {
+    a:hover,
+    a:focus {
+      transform: scale(1.2);
+      transition: .4s;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    a:hover,
+    a:focus { transition: 0s; }
+}
+```
+
+[caniuse](https://caniuse.com/prefers-reduced-motion) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) \| [demo](https://codepen.io/naradesign/pen/xxqvpVJ)
+
+
+
 ### ---------- 작성중 ----------
-
-
-
-### prefers-reduced-motion:
-[caniuse](https://caniuse.com/prefers-reduced-motion) \| []()
 
 
 
