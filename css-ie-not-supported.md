@@ -15,7 +15,7 @@ background-clip: text; // ⚠️-webkit-background-clip: text; 필요(2021-04).
 
 `border-box`, `padding-box`, `content-box`, `⚠️text` 중 하나의 값을 설정할 수 있다. 초기값은 `border-box`이다. `text` 값은 실험중이기 때문에 속성 이름에 `-webkit-` 접두어를 붙여야 한다.
 
-[caniuse](https://caniuse.com/background-clip-text) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/background-clip)
+[caniuse](https://caniuse.com/background-clip-text) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/background-clip) \| [demo](https://codepen.io/naradesign/details/zYoPmwg) \| [w3c](https://www.w3.org/TR/css-backgrounds-3/#background-clip)
 
 
 
@@ -33,7 +33,7 @@ width: calc(var(--variable-width) + 20px);
 
 `+`, `-` 연산자는 좌우에 공백이 필수다. `*`, `/` 연산자는 좌우 공백이 필요하지 않지만 일관성을 위해 띄우는 편이 좋다.
 
-[caniuse](https://caniuse.com/calc) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/calc())
+[caniuse](https://caniuse.com/calc) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/calc()) \| [w3c](https://www.w3.org/TR/css-values-3/#calc-notation)
 
 
 
@@ -45,7 +45,7 @@ width: calc(var(--variable-width) + 20px);
 width: 80ch;
 ```
 
-[caniuse](https://caniuse.com/ch-unit) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/length)
+[caniuse](https://caniuse.com/ch-unit) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/length) \| [w3c](https://www.w3.org/TR/css-values-3/#ch)
 
 
 
@@ -60,7 +60,7 @@ all: unset; // 상속 속성은 inherit, 비상속 속성은 initial.
 all: revert; // unset과 같지만 ua 스타일이 있으면 따른다.
 ```
 
-[caniuse](https://caniuse.com/css-all) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/all)
+[caniuse](https://caniuse.com/css-all) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/all) \| [w3c](https://www.w3.org/TR/css-cascade-4/#all-shorthand)
 
 
 
@@ -76,7 +76,7 @@ all: revert; // unset과 같지만 ua 스타일이 있으면 따른다.
 <a> // :any-link 선택 안 함
 ```
 
-[caniuse](https://caniuse.com/css-any-link) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:any-link)
+[caniuse](https://caniuse.com/css-any-link) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:any-link) \| [w3c](https://www.w3.org/TR/selectors-4/#the-any-link-pseudo)
 
 
 
@@ -112,7 +112,7 @@ background-blend-mode: screen; /* 가산 혼합 ➡️ White */
 
 다양한 [\<blend-mode\>](https://www.w3.org/TR/compositing-1/#ltblendmodegt) 값이 있다.
 
-[caniuse](https://caniuse.com/css-backgroundblendmode) \| [w3c](https://www.w3.org/TR/compositing-1/#propdef-background-blend-mode)
+[caniuse](https://caniuse.com/css-backgroundblendmode) \| [demo](https://codepen.io/naradesign/pen/abBELzM) \| [w3c](https://www.w3.org/TR/compositing-1/#propdef-background-blend-mode)
 
 
 
@@ -130,7 +130,7 @@ box-decoration-break: clone;
 
 `background`, `border`, `box-shadow` 등의 속성에 영향을 준다. 초기값은 `slice`이다.
 
-[caniuse](https://caniuse.com/css-boxdecorationbreak) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break) \| [demo](https://codepen.io/naradesign/pen/rNWppEr)
+[caniuse](https://caniuse.com/css-boxdecorationbreak) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break) \| [demo](https://codepen.io/naradesign/pen/rNWppEr) \| [w3c](https://www.w3.org/TR/css-break-3/#break-decoration)
 
 
 
@@ -145,7 +145,7 @@ caret-color: red;
 초기값은 `auto`이며 보통 검은색이다. 대비를 보장하기 위해 다른 색을 표시할 수 있다.
 
 
-[caniuse](https://caniuse.com/css-caret-color) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
+[caniuse](https://caniuse.com/css-caret-color) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color) \| [w3c](https://www.w3.org/TR/css-ui-3/#caret-color)
 
 
 
@@ -180,7 +180,7 @@ clip-path: url(#clipPath); // <svg> 요소의 <clipPath> 참조
 
 ⚠️ 사파리, 삼성 인터넷 브라우저는 속성 이름에 `-webkit-` 접두어를 표시해야 한다.
 
-[demo](https://lab.iamvdo.me/css-svg-masks/) \| [caniuse](https://caniuse.com/css-clip-path) \| [w3c](https://www.w3.org/TR/css-masking-1/#propdef-clip-path)
+[caniuse](https://caniuse.com/css-clip-path) \| [demo](https://lab.iamvdo.me/css-svg-masks/) \| [w3c](https://www.w3.org/TR/css-masking-1/#propdef-clip-path)
 
 
 
@@ -195,7 +195,7 @@ background-image: conic-gradient(at 25% 75%, black, white); // 회전 축
 background-image: conic-gradient(from 45deg at 25% 75%, black, white); // from at 순서 필수
 ```
 
-[caniuse](https://caniuse.com/css-conic-gradients) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient())
+[caniuse](https://caniuse.com/css-conic-gradients) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient()) \| [demo](https://codepen.io/naradesign/pen/oNYELEw) \| [w3c](https://www.w3.org/TR/css-images-4/#conic-gradients)
 
 
 
@@ -210,7 +210,7 @@ button:default { ... } // == form button[type='submit']
 
 사용자의 선택은 이 선택자의 선택 결과에 영향을 주지 않는다. 오직 HTML에 속성으로 명시한 `checked` 속성 또는 `submit` 타입을 선택한다.
 
-[caniuse](https://caniuse.com/css-default-pseudo) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/:default)
+[caniuse](https://caniuse.com/css-default-pseudo) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/:default) \| [w3c](https://www.w3.org/TR/selectors-4/#the-default-pseudo)
 
 
 
@@ -230,7 +230,7 @@ UA가 정의하는 환경 변수(`safe-area-inset-*`) 인자를 CSS 코드에 �
 
 CSS 값을 사용할 수 있는 다양한 위치(예를 들면 `@` 규칙 또는 `calc()` 함수 인자)에서 사용할 수 있다. `env()` 인자 작성 위치에 쉼표(`,`)를 사용하면 폴백으로 사용할 수 있는 값을 추가할 수 있다.
 
-[demo](https://naradesign.github.io/css/env-function.html) \| [caniuse](https://caniuse.com/css-env-function) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/env())
+[caniuse](https://caniuse.com/css-env-function) \| [demo](https://naradesign.github.io/css/env-function.html) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/env()) \| [w3c](https://drafts.csswg.org/css-env-1/#env-function)
 
 
 
@@ -255,7 +255,7 @@ CSS 값을 사용할 수 있는 다양한 위치(예를 들면 `@` 규칙 또는
 
 미디어 쿼리 등 다른 규칙의 하위 규칙으로 사용할 수 있다. `and`, `or`, `not` 연산자를 사용할 수 있다. 종류가 다른 연산자를 함께 사용하는 경우 소괄호`()`로 우선 순위를 정의해야 한다.
 
-[caniuse](https://caniuse.com/css-featurequeries) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/@supports)
+[caniuse](https://caniuse.com/css-featurequeries) \| [demo](https://codepen.io/naradesign/pen/dKEWWB) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/@supports) \| [w3c](https://www.w3.org/TR/css-conditional-3/#at-supports)
 
 
 
@@ -271,7 +271,7 @@ filter: brightness(50%);
 
 취할 수 있는 값으로 `grayscale`, `sepia`, `saturate`, `hue-rotate`, `invert`, `opacity`, `brightness`, `contrast`, `blur`, `drop-shadow` 가 있다.
 
-[caniuse](https://caniuse.com/css-filters) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) \| [w3c](https://www.w3.org/TR/filter-effects-1/#typedef-filter-function)
+[caniuse](https://caniuse.com/css-filters) \| [demo](https://codepen.io/naradesign/pen/OJWMrEd) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) \| [w3c](https://www.w3.org/TR/filter-effects-1/#typedef-filter-function)
 
 
 
@@ -285,7 +285,7 @@ fieldset:focus-within { background: silver; }
 
 예제는 `fieldset` 요소 내부에 초점 받은 요소가 있는 경우 선택한다.
 
-[caniuse](https://caniuse.com/css-focus-within) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/:focus-within)
+[caniuse](https://caniuse.com/css-focus-within) \| [demo](https://codepen.io/naradesign/pen/rNOEBwY) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/:focus-within) \| [w3c](https://www.w3.org/TR/selectors-4/#the-focus-within-pseudo)
 
 
 
@@ -319,7 +319,7 @@ grid: auto / auto 1fr 25% 100px;
 
 container, item, track, row, column, line, gutter, cell, area 개념을 사용한다. `grid` 키워드는 `display` 속성의 값이기도 하고 그리드 컨테이어에 적용하는 다양한 `grid-*-*` 속성의 단축 속성 이름이기도 하다.
 
-[caniuse](https://caniuse.com/css-grid) \| [w3c](https://www.w3.org/TR/css-grid-1/)
+[caniuse](https://caniuse.com/css-grid) \| [demo](https://naradesign.github.io/css-grid-layout.html) \| [w3c](https://www.w3.org/TR/css-grid-1/)
 
 
 
@@ -344,7 +344,7 @@ background-image: image-set(
 
 제조사 접두어를 붙여야 한다. `-webkit-image-set()` ⚠️실험중(2021-04)
 
-[caniuse](https://caniuse.com/css-image-set) \| [demo](https://cloudfour.com/examples/image-set/)
+[caniuse](https://caniuse.com/css-image-set) \| [demo](https://cloudfour.com/examples/image-set/) \| [w3c](https://www.w3.org/TR/css-images-4/#image-set-notation)
 
 
 
@@ -371,7 +371,7 @@ background-image: image-set(
 #age:out-of-range + p::after { content: 'out of scope!'; } // 🚫
 ```
 
-[caniuse](https://caniuse.com/css-in-out-of-range) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range)
+[caniuse](https://caniuse.com/css-in-out-of-range) \| [demo](https://codepen.io/naradesign/pen/JjEyRvO) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range) \| [w3c](https://www.w3.org/TR/selectors-4/#range-pseudos)
 
 
 
@@ -386,7 +386,7 @@ progress:indeterminate { ... }
 
 `checkbox` 요소의 `checked` 상태가 `true`도 아니고 `false`도 아닐 때 선택. `radio` 그룹에서 어떤 요소도 `checked` 상태가 아닐 때 선택. `progress` 요소에 `value` 값을 지정하지 않았을 때 선택.
 
-[caniuse](https://caniuse.com/css-indeterminate-pseudo) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) \| [demo](https://codepen.io/naradesign/pen/jOyLoEW?editors=1100)
+[caniuse](https://caniuse.com/css-indeterminate-pseudo) \| [demo](https://codepen.io/naradesign/pen/jOyLoEW) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) \| [w3c](https://www.w3.org/TR/selectors-4/#indeterminate)
 
 
 
@@ -407,7 +407,7 @@ line-height: 1.5;
 
 w3c 초안에서는 `max-lines`, `block-ellipsis`, `continue`의 단축 속성으로 설명하고 있지만 브라우저에서 아직 구현 전.(2021-04)
 
-[caniuse](https://caniuse.com/css-line-clamp) \| [w3c](https://drafts.csswg.org/css-overflow-3/#fragmentation)
+[caniuse](https://caniuse.com/css-line-clamp) \| [demo](https://codepen.io/naradesign/pen/ExZwxKr) \| [w3c](https://www.w3.org/TR/css-overflow-3/#line-clamp)
 
 
 
@@ -468,7 +468,7 @@ width: clamp(240px, 48%, 24vw * 3); // 최솟값 ~ 최댓값 사이의 선호값
 
 자리 표시자는 입력하는 순간 시야에서 사라지기 때문에 접근성 문제가 있다. 가능하다면 항상 힌트를 제공하는 방식을 추천한다. [닐슨 노먼 그룹의 자리 표시자 관련 기사](https://www.nngroup.com/articles/form-design-placeholders/)를 참고하길 바란다.
 
-[caniuse](https://caniuse.com/css-placeholder) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder)
+[caniuse](https://caniuse.com/css-placeholder) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) \| [w3c](https://www.w3.org/TR/css-pseudo-4/#placeholder-pseudo)
 
 
 
@@ -485,7 +485,7 @@ width: clamp(240px, 48%, 24vw * 3); // 최솟값 ~ 최댓값 사이의 선호값
 }
 ```
 
-[caniuse](https://caniuse.com/css-placeholder-shown) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
+[caniuse](https://caniuse.com/css-placeholder-shown) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown) \| [w3c](https://www.w3.org/TR/selectors-4/#ref-for-placeholder-shown-pseudo)
 
 
 
@@ -493,7 +493,7 @@ width: clamp(240px, 48%, 24vw * 3); // 최솟값 ~ 최댓값 사이의 선호값
 
 '읽기 전용, 읽고 쓰기' 요소를 선택할 수 있다. 선택하는 요소가 폼 콘트롤로 제한되어 있지 않다. 폼 콘트롤 아닌 대부분의 읽기 전용 요소는 `:read-only`로 선택된다. `input`, `textarea` 뿐만 아니라 `contenteditable` 속성이 있으면 `:read-write` 선택자로 선택한다. `p`, `select` 요소는 `:read-only`와 일치한다.
 
-[caniuse](https://caniuse.com/css-read-only-write) \| [w3c(https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-only)
+[caniuse](https://caniuse.com/css-read-only-write) \| [w3c](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-only)
 
 
 
@@ -540,7 +540,7 @@ shape-image-threshold: 0;
 
 외부 이미지 자원은 이미지를 제공하는 서버측 CORS 설정에 따라 표시 여부가 결정된다. 외부 이미지 자원의 CORS가 허용되지 않으면 `shape-outside` 속성은 무시된다.
 
-[caniuse](https://caniuse.com/css-shapes) \| [w3c](https://www.w3.org/TR/css-shapes/) \| [demo](https://codepen.io/naradesign/pen/ZELaqVK?editors=1100)
+[caniuse](https://caniuse.com/css-shapes) \| [demo](https://codepen.io/naradesign/pen/ZELaqVK) \| [w3c](https://www.w3.org/TR/css-shapes/)
 
 
 
@@ -561,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 
 `scroll-margin`, `scroll-padding` 속성으로 스냅 위치를 정밀하게 제어할 수 있다.
 
-[caniuse](https://caniuse.com/css-snappoints) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts) \| [demo](https://webkit.org/demos/scroll-snap/index.html)
+[caniuse](https://caniuse.com/css-snappoints) \| [demo](https://webkit.org/demos/scroll-snap/index.html) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts) \| [w3c](https://www.w3.org/TR/css-scroll-snap-1/)
 
 
 
@@ -574,7 +574,7 @@ h1, h2, h3, h4, h5, h6 {
 .sticky { position: sticky; top: 4px; } /* 고정하는 요소 */
 ```
 
-[caniuse](https://caniuse.com/css-sticky) \| [w3c](https://www.w3.org/TR/css-position-3/#sticky-position) \| [demo](https://codepen.io/naradesign/pen/GeBxqe)
+[caniuse](https://caniuse.com/css-sticky) \| [demo](https://codepen.io/naradesign/pen/GeBxqe) \| [w3c](https://www.w3.org/TR/css-position-3/#sticky-position)
 
 
 
@@ -589,7 +589,7 @@ text-orientation: mixed | upright | sideways;
 
 초깃값 `mixed`는 알파벳을 눕히고 CJK는 세움. `upright` 값은 세움으로 통일. `sideways` 값은 눕히는 방향으로 통일. W3C 명세 예시를 참고할 것.
 
-[caniuse](https://caniuse.com/css-text-orientation) \| [w3c](https://drafts.csswg.org/css-writing-modes-3/#text-orientation)
+[caniuse](https://caniuse.com/css-text-orientation) \| [demo](https://codepen.io/naradesign/pen/BaWVLqY) \| [w3c](https://www.w3.org/TR/css-writing-modes-3/#text-orientation)
 
 
 
@@ -635,7 +635,7 @@ tab-size: <number> | <length>
 .margin-child { margin: 32px; } /* 부모-자식 수직 마진 중첩 안 됨 */
 ```
 
-[caniuse](https://caniuse.com/flow-root) \| [demo](https://codepen.io/naradesign/details/dyvyewz)
+[caniuse](https://caniuse.com/flow-root) \| [demo](https://codepen.io/naradesign/details/dyvyewz) |\ [w3c](https://www.w3.org/TR/css-display-3/#valdef-display-flow-root)
 
 
 
@@ -659,7 +659,7 @@ font-family: system-ui;
 font-kerning: auto | normal | none;
 ```
 
-[caniuse](https://caniuse.com/font-kerning) \| [w3c](https://www.w3.org/TR/css-fonts-3/#font-kerning-prop)
+[caniuse](https://caniuse.com/font-kerning) \| [demo](https://codepen.io/naradesign/pen/rNybQWp) \| [w3c](https://www.w3.org/TR/css-fonts-3/#font-kerning-prop)
 
 
 
@@ -667,9 +667,9 @@ font-kerning: auto | normal | none;
 
 오픈타입(.otf) 글꼴에서 숫자의 모양을 제어할 수 있다. 오픈타입 글꼴은 다양한 변형을 제공하기 때문에 가변 글꼴이라고 부르기도 한다. 오픈타입 글꼴이라고 해서 모든 형태의 값을 지원하는 것은 아니다.
 
-normal \| [ \<numeric-figure-values\> \|\| \<numeric-spacing-values\> \|\| \<numeric-fraction-values\> \|\| ordinal \|\| slashed-zero ]
-
 ```
+normal | [ <numeric-figure-values> || <numeric-spacing-values> || <numeric-fraction-values> || ordinal || slashed-zero ]
+
 font-variant-numeric: normal; // 적용하지 않음
 font-variant-numeric: lining-nums | oldstyle-nums; // 숫자의 수직 위치
 font-variant-numeric: proportional-nums | tabular-nums; // 숫자의 폭
@@ -678,7 +678,7 @@ font-variant-numeric: ordinal; // 서수를 위첨자로
 font-variant-numeric: slashed-zero; // 숫자 0에 슬래시 포함
 ```
 
-[caniuse](https://caniuse.com/font-variant-numeric) \| [demo](https://code.thisarmy.com/fontsinfo/) \| [w3c](https://drafts.csswg.org/css-fonts-3/#propdef-font-variant-numeric)
+[caniuse](https://caniuse.com/font-variant-numeric) \| [demo](https://codepen.io/naradesign/pen/MWpdomm) \| [w3c](https://drafts.csswg.org/css-fonts-3/#propdef-font-variant-numeric)
 
 
 
@@ -690,7 +690,7 @@ font-variant-numeric: slashed-zero; // 숫자 0에 슬래시 포함
 justify-content: space-evenly
 ```
 
-[caniuse](https://caniuse.com/justify-content-space-evenly) \| [w3c](https://drafts.csswg.org/css-align-3/#distribution-values)
+[caniuse](https://caniuse.com/justify-content-space-evenly) \| [demo](https://codepen.io/naradesign/pen/WNjeVaG) \| [w3c](https://www.w3.org/TR/css-align-3/#distribution-values)
 
 
 
@@ -726,7 +726,7 @@ object-position: 80px 160px;
 }
 ```
 
-[caniuse](https://caniuse.com/prefers-color-scheme) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme) \| [demo](https://codepen.io/naradesign/pen/RwpzvYx)
+[caniuse](https://caniuse.com/prefers-color-scheme) \| [demo](https://codepen.io/naradesign/pen/RwpzvYx) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme)
 
 
 
@@ -748,16 +748,27 @@ object-position: 80px 160px;
 }
 ```
 
-[caniuse](https://caniuse.com/prefers-reduced-motion) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) \| [demo](https://codepen.io/naradesign/pen/xxqvpVJ)
-
-
-
-### ---------- 작성중 ----------
+[caniuse](https://caniuse.com/prefers-reduced-motion) \| [demo](https://codepen.io/naradesign/pen/xxqvpVJ) \| [w3c](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion)
 
 
 
 ### text-decoration-*:
-[caniuse](https://caniuse.com/text-decoration) \| []()
+
+`text-decoration` 속성의 확장 속성과 값을 명시한다. 선의 위치, 종류, 색상을 설정할 수 있다.
+
+```
+text-decoration: <'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'>
+text-decoration-line: none | [ underline || overline || line-through || blink ]
+text-decoration-style: solid | double | dotted | dashed | wavy
+text-decoration-color: <color>
+text-decoration-position: auto | [ under || [ left | right ] ]
+```
+
+[caniuse](https://caniuse.com/text-decoration) \| [demo](https://codepen.io/naradesign/pen/NWjWWPB) \| [w3c](https://www.w3.org/TR/css-text-decor-3/#line-decoration)
+
+
+
+### ---------- 작성중 ----------
 
 
 
