@@ -752,7 +752,7 @@ object-position: 80px 160px;
 
 
 
-### text-decoration-*:
+### text-decoration-*:, text-underline-position:
 
 `text-decoration` 속성의 확장 속성과 값을 명시한다. 선의 위치, 종류, 색상을 설정할 수 있다.
 
@@ -761,19 +761,32 @@ text-decoration: <'text-decoration-line'> || <'text-decoration-style'> || <'text
 text-decoration-line: none | [ underline || overline || line-through || blink ]
 text-decoration-style: solid | double | dotted | dashed | wavy
 text-decoration-color: <color>
-text-decoration-position: auto | [ under || [ left | right ] ]
+text-underline-position: auto | [ under || [ left | right ] ]
 ```
 
 [caniuse](https://caniuse.com/text-decoration) \| [demo](https://codepen.io/naradesign/pen/NWjWWPB) \| [w3c](https://www.w3.org/TR/css-text-decor-3/#line-decoration)
 
 
 
+### text-emphasis-*:
+
+텍스트에 강조 마크를 적용할 수 있다. `dot`, `<string>`, `<color>` 값이 유용해 보인다.
+
+```
+text-emphasis: <'text-emphasis-style'> || <'text-emphasis-color'>
+text-emphasis-style: none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ] | <string>
+text-emphasis-color: <color>
+text-emphasis-position: [ over | under ] && [ right⚠️ | left⚠️ ]?
+```
+
+`text-emphasis-position` 속성의 값인 `right`, `left`는 현재(2021-07) 파이어폭스와 사파리만 지원 중.
+
+[caniuse](https://caniuse.com/text-emphasis) \| [demo](https://codepen.io/naradesign/pen/XWRJRWV) \| [w3c](https://www.w3.org/TR/css-text-decor-3/#emphasis-marks)
+
+
+
 ### ---------- 작성중 ----------
 
-
-
-### text-emphasis:
-[caniuse](https://caniuse.com/text-emphasis) \| []()
 
 
 
