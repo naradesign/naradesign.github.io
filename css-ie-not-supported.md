@@ -654,7 +654,7 @@ tab-size: <number> | <length>
 .margin-child { margin: 32px; } /* 부모-자식 수직 마진 중첩 안 됨 */
 ```
 
-[caniuse](https://caniuse.com/flow-root) \| [demo](https://codepen.io/naradesign/details/dyvyewz) |\ [w3c](https://www.w3.org/TR/css-display-3/#valdef-display-flow-root)
+[caniuse](https://caniuse.com/flow-root) \| [demo](https://codepen.io/naradesign/details/dyvyewz) \| [w3c](https://www.w3.org/TR/css-display-3/#valdef-display-flow-root)
 
 
 
