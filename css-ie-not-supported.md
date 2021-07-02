@@ -651,9 +651,9 @@ font-family: system-ui;
 
 
 
-### font-kerning:
+### font-kerning: ⚠️
 
-`font-kerning` 속성은 글자 모양 때문에 배열이 어색한 문자에 적당한 간격을 두어 시각적으로 매끄럽게 보이도록 조정한다. 커닝 활성화가 가능한 오픈타입(.otf) 글꼴에만 적용할 수 있다. 초기값은 `auto`이고 브라우저 설정에 따르는데 보통은 `normal`과 같다. `none` 값은 글자 사이 간격을 보정하지 않는다.
+`font-kerning` 속성은 글자 모양 때문에 배열이 어색한 문자에 적당한 간격을 두어 시각적으로 매끄럽게 보이도록 조정한다. 커닝 활성화가 가능한 오픈타입(.otf)⚠️ 글꼴에만 적용할 수 있다. 초기값은 `auto`이고 브라우저 설정에 따르는데 보통은 `normal`과 같다. `none` 값은 글자 사이 간격을 보정하지 않는다.
 
 ```
 font-kerning: auto | normal | none;
@@ -663,9 +663,9 @@ font-kerning: auto | normal | none;
 
 
 
-### font-variant-numeric:
+### font-variant-numeric: ⚠️
 
-오픈타입(.otf) 글꼴에서 숫자의 모양을 제어할 수 있다. 오픈타입 글꼴은 다양한 변형을 제공하기 때문에 가변 글꼴이라고 부르기도 한다. 오픈타입 글꼴이라고 해서 모든 형태의 값을 지원하는 것은 아니다.
+오픈타입(.otf)⚠️ 글꼴에서 숫자의 모양을 제어할 수 있다. 오픈타입 글꼴은 다양한 변형을 제공하기 때문에 가변 글꼴이라고 부르기도 한다. 오픈타입 글꼴이라고 해서 모든 형태의 값을 지원하는 것은 아니다.
 
 ```
 normal | [ <numeric-figure-values> || <numeric-spacing-values> || <numeric-fraction-values> || ordinal || slashed-zero ]
@@ -785,19 +785,29 @@ text-emphasis-position: [ over | under ] && [ right⚠️ | left⚠️ ]?
 
 
 
-### ---------- 작성중 ----------
-
-
-
-
-### font-variation-settings:
-[caniuse](https://caniuse.com/variable-fonts) \| []()
-
-
-
 ### will-change:
-[caniuse](https://caniuse.com/will-change) \| []()
 
+어떤 스타일을 변경하는지 브라우저에 미리 알려주는 속성으로 렌더링 성능을 최적화할 수 있다. 너무 많이 선언하면 오히려 좋지 않다. 필요한 시점에만 이 속성을 추가한 다음 변경이 끝나면 제거하는 것이 좋다. 빈번한 변경이 예상되는 곳에는 영구적으로 선언하는 것이 좋다.
+
+```
+will-change: auto | <animateable-feature>#
+<animateable-feature> = scroll-position | contents | <custom-ident>
+<custom-ident> = transform | opacity ...
+
+a {
+    transform: scale(1);
+    opacity: .75;
+    transition: opacity .2s;
+}
+a:hover,
+a:focus { will-change: transform, opacity; }
+a:active {
+    transform: scale(1.2);
+    opacity: 1;
+}
+```
+
+[caniuse](https://caniuse.com/will-change) \| [w3c](https://www.w3.org/TR/css-will-change/)
 
 
 
