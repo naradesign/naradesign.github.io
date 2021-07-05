@@ -859,6 +859,21 @@ a:active {
 
 
 
+### :is()⚠️, :not()⚠️, :where()⚠️, :has()⚠️
+
+⚠️2021-07 현재 브라우저 구현이 미진해서 실무에 사용하기 어렵다. 선택자 목록을 인자로 취하는 함수형 가상 클래스 선택자. 인자로 받은 선택자 목록 중 오류가 있어도 다른 선택자는 유효하게 선택할 수 있어 기존의 선택자 그룹과 다르다. :is(), :not(), :has() 선택자는 스스로 특이성에 관여하지 않고 인자로 받은 선택자 목록 중 가장 특이성이 높은 선택자의 특이성 점수를 자신의 특이성 점수로 취한다. :where() 선택자는 :is() 선택자와 쓰임이 같지만 어떤 인자를 받아도 특이성 점수가 항상 '0'이다.
+
+```
+:is(#a, .a) // 일치하면 선택. [엣지, 삼성인터넷 관대한 선택자 목록 지원 안 함](https://caniuse.com/mdn-css_selectors_is_forgiving_selector_list).⚠️
+:not(#a, .a) // 제외한 나머지 모두 선택. [삼성인터넷 선택자 목록 지원 안 함](https://caniuse.com/css-not-sel-list).⚠️
+:has(#a, .a) // 자손을 포함하고 있으면 선택. [아직 지원하는 브라우저 없음](https://caniuse.com/css-has).⚠️
+:where(#a, .a) // :is()와 용법 동일. 그러나 특이성에 관여하지 않음. [삼성인터넷 목록 지원 안 함](https://caniuse.com/mdn-css_selectors_where_forgiving_selector_list).⚠️
+```
+
+[caniuse](https://caniuse.com/css-matches-pseudo) \| [demo](https://codepen.io/naradesign/pen/Pobvqdq) \| [w3c](https://www.w3.org/TR/selectors-4/#specificity-rules)
+
+
+
 ## 참고
 * [caniuse.com](https://caniuse.com/?cats=CSS&statuses=all)
 * [What To Expect When You're Expecting To Drop IE11](https://dev.to/samthor/what-to-expect-when-you-re-expecting-to-drop-ie11-ifg)
