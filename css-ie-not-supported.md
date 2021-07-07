@@ -859,6 +859,29 @@ a:active {
 
 
 
+### inset:
+
+`top`, `right`, `bottom`, `left` 속성의 값을 하나의 `inset` 단축 속성으로 선언할 수 있다. `inset` 속성은 `position` 속성이 `relative, absolute, fixed`인 경우에만 적용할 수 있다.
+
+```
+inset: 0;
+==
+inset: 0 0;
+==
+inset: 0 0 0 0;
+==
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+```
+
+`inset` 속성은 `inset-*-*` 속성의 단축형이다. `inset` 방향은 `writng-mode`, `direction`, `text-orientation` 속성에 따라 다르게 맵핑된다.
+
+[caniuse](https://caniuse.com/mdn-css_properties_inset) \| [demo](https://css-tricks.com/almanac/properties/i/inset/) \| [w3c](https://www.w3.org/TR/css-logical-1/#inset-properties)
+
+
+
 ### :is()⚠️, :not()⚠️, :has()⚠️, :where()⚠️
 
 ⚠️2021-07 현재 브라우저 구현이 미진해서 실무에 사용하기 조심스럽다. 선택자 목록을 인자로 취하는 함수형 가상 클래스 선택자. 인자로 받은 선택자 목록 중 오류가 있어도 다른 선택자는 유효하게 선택할 수 있어 기존의 선택자 그룹과 다르다. `:is()`, `:not()`, `:has()` 선택자는 스스로 특이성에 관여하지 않고 인자로 받은 선택자 목록 중 가장 특이성이 높은 선택자의 특이성 점수를 자신의 특이성 점수로 취한다. `:where()` 선택자는 `:is()` 선택자와 쓰임이 같지만 어떤 인자를 받아도 특이성 점수가 항상 '0'이다.
