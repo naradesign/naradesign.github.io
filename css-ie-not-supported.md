@@ -899,6 +899,26 @@ left: 0;
 
 
 
+### :focus-visible
+
+키보드 초점을 받은 요소를 선택한다. `:focus`와 다른 점으로 `:focus-visible`은 마우스 클릭으로 초점을 받은 요소는 선택하지 않는다.
+
+```
+/* As is */
+:hover,
+:focus { ... }
+
+/* To be */
+:hover,
+:focus-visible { ... }
+```
+
+`:hover`와 `:focus`를 같은 스타일로 처리하면 마우스를 사용하는 환경에서 클릭 받은 요소(`:focus`)와 호버(`:hover`) 스타일을 동시에 표시하기 때문에 문제가 될 수 있다. `:focus-visible` 선택자는 키보드 초점만 선택하기 때문에 마우스에 의해 두 요소가 동시(클릭 + 호버)에 초점 스타일을 표시하는 문제를 해결할 수 있다.
+
+[caniuse](https://caniuse.com/css-focus-visible) \| [demo](https://codepen.io/naradesign/pen/BaRZXXv) \| [w3c](https://www.w3.org/TR/selectors-4/#the-focus-visible-pseudo)
+
+
+
 ## 참고
 * [caniuse.com](https://caniuse.com/?cats=CSS&statuses=all)
 * [What To Expect When You're Expecting To Drop IE11](https://dev.to/samthor/what-to-expect-when-you-re-expecting-to-drop-ie11-ifg)
