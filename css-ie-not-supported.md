@@ -751,6 +751,27 @@ object-position: 80px 160px;
 
 
 
+### place-content:, place-items:, place-self:
+
+주로 grid 또는 flexbox 컨테이너 또는 아이템에 사용한다. `place-content` 속성은 `align-content`, `justify-content` 속성의 단축 속성이다. `place-items` 속성은 `align-items`, `justify-items` 속성의 단축 속성이다. 여러 행 또는 열로 구성된 '콘텐츠' 또는 '아이템'들의 배치 방향(흐름 방향 X)을 한 번에 설정할 수 있다. `place-self` 속성은 그리드 아이템과 블럭 수준의 박스에 적용할 수 있다.
+
+```
+place-content: <'align-content'> <'justify-content'>?
+// Applies to block containers, flex containers, and grid containers.
+
+place-items: <'align-items'> <'justify-items'>?
+// Applies to all elements.
+
+place-self: <'align-self'> <'justify-self'>?
+// Applies to block-level boxes, absolutely-positioned boxes, and grid items.
+```
+
+두 번째 값을 생략하면 첫 번째 값이 복사된다. 값이 하나라도 유효하지 않으면 두 값을 모두 무시한다. flexbox에서는 `place-items`, `place-self` 속성의 두 번째 값에 해당하는 `justify-items`, `justify-self` 속성이 유효하지 않기 때문에 두 번째 값을 선언하면 모든 값을 무시한다.
+
+[caniuse](https://caniuse.com/mdn-css_properties_place-items) | [w3c](https://www.w3.org/TR/css-align-3/#place-content) | [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/place-content)
+
+
+
 ### prefers-color-scheme @media feature
 
 사용자가 색상 테마를 운영 체제에 설정했는지 감지하는 미디어 쿼리.
