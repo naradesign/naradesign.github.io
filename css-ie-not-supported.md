@@ -768,7 +768,7 @@ place-self: <'align-self'> <'justify-self'>?
 
 두 번째 값을 생략하면 첫 번째 값이 복사된다. 값이 하나라도 유효하지 않으면 두 값을 모두 무시한다. flexbox에서는 `place-items`, `place-self` 속성의 두 번째 값에 해당하는 `justify-items`, `justify-self` 속성이 유효하지 않기 때문에 두 번째 값을 선언하면 모든 값을 무시한다.
 
-[caniuse](https://caniuse.com/mdn-css_properties_place-items) | [w3c](https://www.w3.org/TR/css-align-3/#place-content) | [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/place-content)
+[caniuse](https://caniuse.com/mdn-css_properties_place-items) \| [w3c](https://www.w3.org/TR/css-align-3/#place-content) \| [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/place-content)
 
 
 
