@@ -59,8 +59,8 @@ width: 80ch;
 ```
 all: initial; // 모든 속성을 initial 값으로 재설정.
 all: inherit; // 상속 가능한 모든 속성을 inherit.
-all: unset; // 상속 속성은 inherit, 비상속 속성은 initial.
-all: revert; // unset과 같지만 ua 스타일이 있으면 따른다.
+all: unset; // 상속 가능한 속성은 inherit, 비상속 속성은 initial.
+all: revert; // 상속 가능한 속성은 inherit, 비상속 속성은 UA 스타일로 초기화.
 ```
 
 [caniuse](https://caniuse.com/css-all) \| [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/all) \| [w3c](https://www.w3.org/TR/css-cascade-4/#all-shorthand)
