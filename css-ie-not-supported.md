@@ -165,7 +165,7 @@ caret-color: red;
 <p data-case="A">
 ```
 
-`i` 대신 `s` 문자를 사용하면 대소문자를 구별해서 선택할 수 있다. 그러나 CSS 속성 선택자에서 속성 값은 기본적으로 대소문자를 구별하기 때문에 `s` 구문을 사용하는 경우는 드물다.
+`i` 대신 `s` 문자를 사용하면 대소문자를 구별해서 선택할 수 있다. 그러나 CSS 속성 선택자에서 속성 값은 기본적으로 대소문자를 구별하기 때문에 `s` 구문을 명시하는 경우는 드물다.
 
 [caniuse](https://caniuse.com/css-case-insensitive) \| [w3c](https://www.w3.org/TR/selectors-4/#attribute-case)
 
