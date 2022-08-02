@@ -58,7 +58,7 @@ width: 80ch;
 
 ```
 all: initial; // 모든 속성을 initial 값으로 재설정.
-all: inherit; // 상속 가능한 속성은 inherit, 비상속 속성은 UA 스타일로 초기화.
+all: inherit; // 모든 속성을 부모 요소로부터 inherit.
 all: unset; // 상속 가능한 속성은 inherit, 비상속 속성은 initial.
 all: revert; // 상속 가능한 속성은 inherit, 비상속 속성은 UA 스타일로 초기화.
 ```
