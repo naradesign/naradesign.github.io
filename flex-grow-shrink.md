@@ -2,7 +2,7 @@
 
 오늘은 흔히 flex 또는 flexible 박스 모델이라고 부르는 <a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexsible box layout module level 1(Candidate Recommendation)</a> 명세를 설명해 보려고 합니다. 아직 표준 후보 단계이지만 <a href="http://caniuse.com/#search=flexible">현존하는 최신 브라우저에 flexible box layout module은 이미 구현</a>되어 있습니다.
 
-기존에 우리가 사용하던 레이아웃 기법은 `displa`, `float`, `position` 으로써 컬럼 레이아웃을 표현하는데 한계가 있고 구현 방법이 복잡한 문제가 있었는데요. flexible(신축성 있는, 유연한) 박스 모델의 장점을 한 마디로 표현하면 "**복잡한 계산 없이 박스의 크기와 순서를 유연하게 배치할 수 있다.**" 라고 정리할 수 있습니다. 쉬운 예를 들면 컬럼의 한 쪽은 고정하고 다른 한 쪽을 가변폭으로 처리하고 싶을 때 유용하지만 그것 이상의 편의를 제공합니다. 어떤 속성과 값을 통해 무엇을 할 수 있는지 설명해 보겠습니다.
+기존에 우리가 사용하던 레이아웃 기법은 `display`, `float`, `position` 으로써 컬럼 레이아웃을 표현하는데 한계가 있고 구현 방법이 복잡한 문제가 있었는데요. flexible(신축성 있는, 유연한) 박스 모델의 장점을 한 마디로 표현하면 "**복잡한 계산 없이 박스의 크기와 순서를 유연하게 배치할 수 있다.**" 라고 정리할 수 있습니다. 쉬운 예를 들면 컬럼의 한 쪽은 고정하고 다른 한 쪽을 가변폭으로 처리하고 싶을 때 유용하지만 그것 이상의 편의를 제공합니다. 어떤 속성과 값을 통해 무엇을 할 수 있는지 설명해 보겠습니다.
 
 * <a href="#플렉스-컨테이너와-플렉스-아이템flex-container--flex-item의-개념">플렉스 컨테이너와 플렉스 아이템(flex container &amp; flex item)의 개념.</a>
   * <a href="#flex-container">flex container</a>

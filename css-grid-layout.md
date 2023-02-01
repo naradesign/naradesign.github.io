@@ -860,7 +860,7 @@ grid-row-end: 3 Y;
 grid-column-end: span 2 A;
 ```
 
-예제 패턴만으로 `grid-row-start`, `grid-column-start`, `grid-row-end`, `grid-column-end` 속성의 값 구문 이해가 어렵다면 [CSS 그리드 모듈 35번 예제](https://www.w3.org/TR/css-grid-1/#example-198bb78c)를 참고하길 바란다.
+예제 패턴만으로 `grid-row-start`, `grid-column-start`, `grid-row-end`, `grid-column-end` 속성의 값 구문 이해가 어렵다면 [CSS 그리드 모듈 35번 예제](https://www.w3.org/TR/css-grid-1/#example-5d302887)를 참고하길 바란다.
 
 ### 참고
 * [CSS Values and Units Module Level 3](https://www.w3.org/TR/css3-values/)
