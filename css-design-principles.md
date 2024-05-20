@@ -58,4 +58,4 @@ id 선택자는 JavaScript에서 DOM을 선택하는 용도로 사용하고, cla
 
 처음 CSS를 접했을 때 한 번 선언한 코드를 여러 곳에서 다시 조립하여 재사용할 수 있는 것이 축복처럼 느껴졌다. 하지만 이제는 쓰레기 더미에서 진주알을 찾는 기분이다. CSS 코드의 책임 범위를 명확하게 축소하자. 유효한 코드보다 쓰레기와 취소선이 더 많은 디스토피아를 만들지 않기를 바란다.
 
-마지막으로 오랜 경험에 따라 꼭 필요했던 속성을 초기화하고 선택자 명시도를 '0점'으로 만든 나만의 [reset.css](https://github.com/naradesign/css-reset-by-class/blob/main/css-reset-by-class.css)를 공유해 본다. 나는 매 프로젝트마다 이 코드에서 점진적으로 불필요한 코드를 제거하고 필요한 코드를 조금씩 추가하는 편이다.
+마지막으로 오랜 경험에 따라 꼭 필요했던 속성을 초기화하고 선택자 명시도를 '0점'으로 만든 나만의 [reset.css](https://github.com/naradesign/css-reset-by-class/blob/main/css-reset-by-class.css)를 공유해 본다. 나는 매 프로젝트마다 이 코드에서 점진적으로 불필요한 코드를 제거하고 필요한 코드를 몇 줄 추가하는 편이다.
