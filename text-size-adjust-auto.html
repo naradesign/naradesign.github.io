@@ -10,11 +10,19 @@
       -webkit-text-size-adjust: auto;
       text-size-adjust: auto;
     }
+    p {
+      white-space:pre-line;
+      overflow-wrap:break-word;
+    }
   </style>
 </head>
 <body>
   <p>
-    This is a paragraph with text-size-adjust set to auto. This property allows mobile browsers to adjust the text size based on the user's preferences.
+    html {
+      -moz-text-size-adjust: auto;
+      -webkit-text-size-adjust: auto;
+      text-size-adjust: auto;
+    }
   </p>
 </body>
 </html>

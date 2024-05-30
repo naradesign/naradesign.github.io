@@ -10,11 +10,19 @@
       -webkit-text-size-adjust: none;
       text-size-adjust: none;
     }
+    p {
+      white-space:pre-line;
+      overflow-wrap:break-word;
+    }
   </style>
 </head>
 <body>
   <p>
-    This is a paragraph with text-size-adjust set to none. This property prevents mobile browsers from adjusting the text size based on the user's preferences.
+    html {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
   </p>
 </body>
 </html>
