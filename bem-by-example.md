@@ -245,4 +245,4 @@ BEM 이름은 의도적으로 `블록__요소--변경자`를 분리하기 위해
 Nathan은 컨텐츠 관리 솔루션 설계 및 확장 가능한 설계 시스템 작성 경험이 있는 백엔드 개발자다. Nathan은 [Dayton Web Developers](http://www.meetup.com/dayton-web-developers/) 및 [Dayton Drupal User Group](http://www.meetup.com/drupal-dayton/)의 설립자다. [Nathan의 글을 더 읽을 수 있다](https://seesparkbox.com/foundry/author/nathan_rambeck). [Twitter](https://twitter.com/nrambeck), [CodePen](https://codepen.io/nrambeck/), [GitHub](https://github.com/nrambeck)에서 그를 찾을 수 있다.
 
 ### 역자
-마크업 개발자 정찬명입니다. 포스트에 문제가 있으면 [이슈](https://github.com/naradesign/article/issues)로 등록해 주세요. 비공개로 연락하려면 메일 주세요. dece24 앳 gmail 닷 com
+웹 UI 개발자 정찬명입니다. 포스트에 문제가 있으면 [이슈](https://github.com/naradesign/article/issues)로 등록해 주세요. 비공개로 연락하려면 메일 주세요. dece24 앳 gmail 닷 com
